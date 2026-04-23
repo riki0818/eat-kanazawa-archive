@@ -24,8 +24,8 @@
     font-family: 'Shippori Mincho B1', serif;
     background: var(--paper);
     color: var(--ink);
-    line-height: 1.8;
-    font-size: 15px;
+    line-height: 1.75;
+    font-size: 16px;
     background-image:
       radial-gradient(circle at 20% 20%, rgba(143,118,54,0.05) 0%, transparent 50%),
       radial-gradient(circle at 80% 80%, rgba(184,53,47,0.04) 0%, transparent 50%);
@@ -566,64 +566,62 @@
      ================================================= */
   @media (max-width: 768px){
     body{ font-size: 15px; line-height: 1.75; }
-    body::before{ opacity: 0.15; }
+    body::before{ opacity: 0.2; }
 
-    .container{ padding: 0 16px; }
+    .container{ padding: 0 18px; }
 
     /* Masthead */
-    .masthead{ padding: 28px 0 24px; }
+    .masthead{ padding: 32px 0 28px; }
     .masthead h1{
-      font-size: 42px !important;
+      font-size: 48px !important;
       line-height: 1 !important;
       letter-spacing: -0.02em !important;
     }
     .masthead h1 .sub-char{
-      font-size: 12px !important;
+      font-size: 13px !important;
       margin-top: 10px !important;
-      letter-spacing: 0.15em !important;
     }
     .masthead-meta{
       flex-direction: column;
       gap: 4px;
-      font-size: 9px;
+      font-size: 10px;
     }
     .masthead-dek{
       font-size: 14px !important;
       line-height: 1.85 !important;
-      margin-top: 18px !important;
+      margin-top: 20px !important;
     }
     .stamp{
-      width: 56px !important;
-      height: 56px !important;
-      top: 16px !important;
-      right: 16px !important;
+      width: 64px !important;
+      height: 64px !important;
+      top: 20px !important;
+      right: 18px !important;
     }
-    .stamp span{ font-size: 9px !important; }
+    .stamp span{ font-size: 10px !important; }
 
     /* Masthead 統計 - 2列に */
     .masthead-stats{
       grid-template-columns: 1fr 1fr !important;
-      gap: 0 !important;
-      margin-top: 24px !important;
+      gap: 16px !important;
+      margin-top: 28px !important;
     }
-    .stat{ padding: 16px 12px !important; }
-    .stat-num{ font-size: 28px !important; }
-    .stat-label{ font-size: 8px !important; letter-spacing: 0.1em !important; }
+    .masthead-stats .stat-num{ font-size: 32px !important; }
+    .masthead-stats .stat-label{ font-size: 10px !important; }
 
     /* 30周年リードセクション */
     #anniversary-lead{
-      padding: 20px 16px !important;
-      margin: 20px 0 32px !important;
+      padding: 28px 20px !important;
+      margin: 24px 0 40px !important;
     }
     #anniversary-lead h2{
-      font-size: 20px !important;
+      font-size: 22px !important;
       line-height: 1.45 !important;
     }
     #anniversary-lead > div[style*="grid-template-columns"]{
       grid-template-columns: 1fr !important;
-      gap: 20px !important;
+      gap: 24px !important;
     }
-    #anniversary-lead p{ font-size: 13px !important; line-height: 1.8 !important; }
+    #anniversary-lead p{ font-size: 13px !important; }
     #anniversary-lead div[style*="border-top"]{
       flex-direction: column !important;
       gap: 10px !important;
@@ -631,151 +629,127 @@
     }
 
     /* Section heads */
-    section{ padding: 48px 0 24px !important; }
     .section-head{
       flex-direction: column;
       gap: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
-    .section-num{ font-size: 48px !important; }
-    .section-title{ font-size: 22px !important; }
-    .section-title .en{ font-size: 10px !important; letter-spacing: 0.15em !important; }
+    .section-num{ font-size: 56px !important; }
+    .section-title{ font-size: 24px !important; }
+    .section-title .en{ font-size: 11px !important; }
 
     /* Prose */
-    .prose{ font-size: 14px; margin-left: 0 !important; }
-    .prose p{ font-size: 14px !important; line-height: 1.8 !important; }
-    .prose blockquote{
+    .prose{ font-size: 14px; }
+    .prose p{ font-size: 14px; }
+    blockquote{
       font-size: 14px !important;
-      padding: 14px 16px !important;
-      margin: 16px 0 !important;
+      padding: 16px 18px !important;
+      margin: 20px 0 !important;
     }
-    .prose blockquote cite{ font-size: 11px !important; }
 
     /* Callouts */
     .callouts{
       grid-template-columns: 1fr !important;
-      gap: 12px !important;
+      gap: 16px !important;
     }
-    .callout{
-      padding: 16px !important;
-    }
-    .callout h5{ font-size: 16px !important; }
-    .callout p{ font-size: 13px !important; line-height: 1.75 !important; }
+    .callout{ padding: 18px !important; }
 
     /* Eras */
     .era{
-      padding: 16px 0 !important;
-      margin-bottom: 32px !important;
+      padding: 20px 0 !important;
       display: block !important;
     }
     .era-label{
       display: inline-block !important;
-      margin-bottom: 8px !important;
-      font-size: 10px !important;
+      margin-bottom: 10px !important;
     }
     .era-years{
       display: block !important;
-      font-size: 11px !important;
-      margin-bottom: 8px !important;
-      margin-left: 0 !important;
-      line-height: 1.5 !important;
+      font-size: 12px !important;
+      margin-bottom: 10px !important;
     }
-    .era-desc{ font-size: 13px !important; line-height: 1.8 !important; }
+    .era-desc{ font-size: 14px !important; }
 
-    /* ===== EDITIONS ===== */
+    /* ===== EDITIONS (メイン: 1列カード型に再構成) ===== */
     .editions{ margin-left: 0 !important; }
     .edition{
       grid-template-columns: 1fr !important;
-      gap: 12px !important;
-      padding: 20px 0 !important;
+      gap: 14px !important;
+      padding: 24px 0 !important;
     }
     .edition-no{
       flex-direction: row !important;
       flex-wrap: wrap !important;
       align-items: baseline !important;
-      gap: 10px !important;
-      padding-bottom: 10px;
+      gap: 12px !important;
+      padding-bottom: 12px;
       border-bottom: 1px solid rgba(26,24,20,0.1);
     }
     .edition-no .nth-big{
-      font-size: 34px !important;
+      font-size: 38px !important;
       padding-bottom: 0 !important;
       margin-bottom: 0 !important;
       border-bottom: none !important;
     }
     .edition-no .year{
-      font-size: 12px !important;
+      font-size: 13px !important;
       margin-bottom: 0 !important;
     }
     .edition-no .fy{
-      font-size: 9px !important;
+      font-size: 10px !important;
       margin-bottom: 0 !important;
     }
-    .edition-no .era{ font-size: 9px !important; }
+    .edition-no .era{ font-size: 10px !important; }
 
     /* 休止エントリ */
-    .edition-no--hiatus .nth-big--hiatus{ font-size: 20px !important; }
+    .edition-no--hiatus .nth-big--hiatus{ font-size: 22px !important; }
 
     /* 30周年エントリ */
-    .edition-no--anniv .nth-big--anniv{ font-size: 38px !important; }
-    .edition-no--anniv .anniv-badge{ font-size: 9px !important; }
+    .edition-no--anniv .nth-big--anniv{
+      font-size: 42px !important;
+    }
+    .edition-no--anniv .anniv-badge{
+      font-size: 10px !important;
+    }
 
-    .edition-body h4{ font-size: 15px !important; }
-    .edition-body .theme{ font-size: 13px !important; }
-    .edition-body p{ font-size: 13px !important; line-height: 1.75 !important; }
+    .edition-body h4{ font-size: 16px !important; }
+    .edition-body .theme{ font-size: 14px !important; }
+    .edition-body p{ font-size: 13px !important; }
 
-    /* Edition side — compact card */
+    /* Edition side（会場情報など）をフラットに */
     .edition-side{
       display: flex !important;
       flex-direction: column !important;
-      gap: 4px !important;
-      padding: 10px 12px !important;
+      gap: 6px !important;
+      padding: 12px 14px !important;
       background: rgba(184,53,47,0.04) !important;
       border-left: 3px solid var(--red) !important;
-      margin-top: 4px !important;
-      border-top: none !important;
+      margin-top: 8px !important;
     }
     .edition-side .field{
-      font-size: 10px !important;
+      font-size: 11px !important;
       display: flex !important;
-      gap: 6px !important;
+      gap: 8px !important;
     }
 
     /* People grid */
     .people-grid{
       grid-template-columns: 1fr !important;
-      gap: 1px !important;
+      gap: 12px !important;
     }
-    .person{ padding: 14px 16px !important; }
-    .person .name{ font-size: 14px !important; }
 
-    /* Pull quote */
-    .pullquote{ margin: 40px 0 !important; padding: 28px 0 !important; }
-    .pullquote q{ font-size: 18px !important; line-height: 1.6 !important; }
-    .pullquote cite{ font-size: 10px !important; }
-
-    /* Sources */
-    .sources{ padding: 40px 0 !important; }
-    .sources-list{
-      margin-left: 0 !important;
-      font-size: 11px !important;
-    }
+    /* Sources list */
     .sources-list li{
-      padding: 6px 0 !important;
-      line-height: 1.8 !important;
-    }
-    .sources-list li .year-tag{
-      width: 36px !important;
-      margin-right: 8px !important;
-      font-size: 9px !important;
+      font-size: 12px !important;
+      padding: 8px 0 !important;
     }
 
     /* Colophon */
     .colophon{
       flex-direction: column !important;
       gap: 8px !important;
-      font-size: 9px !important;
-      padding: 28px 0 !important;
+      font-size: 11px !important;
+      padding: 32px 0 !important;
     }
     .colophon .divider{ display: none !important; }
 
@@ -800,6 +774,15 @@
       flex-direction: column !important;
       gap: 10px !important;
     }
+
+    /* Pull quote */
+    .pullquote{ margin: 40px 0 !important; padding: 28px 0 !important; }
+    .pullquote q{ font-size: 18px !important; line-height: 1.6 !important; }
+    .pullquote cite{ font-size: 10px !important; }
+
+    /* Sources */
+    .sources{ padding: 40px 0 !important; }
+    .sources-list{ margin-left: 0 !important; }
   }
 
   /* 小さめスマホ */
@@ -809,7 +792,6 @@
     .edition-no .nth-big{ font-size: 28px !important; }
     .section-num{ font-size: 40px !important; }
     .section-title{ font-size: 18px !important; }
-    .stat-num{ font-size: 24px !important; }
   }
 </style>
 </head>
@@ -1012,6 +994,26 @@
         両者は矛盾せず、むしろ重層的に効いていた。
         「eAT」は、<strong>1966年NY前衛アート運動への敬意</strong>と、<strong>1994-1997年の"e"時代テックカルチャー</strong>という、30年スパンの文脈を小文字ひとつに畳み込んだ表記だったことになる。
         そして2020年、その小文字「e」が大文字「E」に変わったとき、「electronic Art Talent」から「食文化」へと意味そのものが再定義された —— この30年の物語の、もう一つの結節点である。
+      </p>
+    </div>
+
+    <!-- ===== 金沢世界都市構想との関係 ===== -->
+    <div style="margin-top: 48px; padding: 36px 40px; background: var(--paper-dark); border-top: 3px solid var(--gold); border-bottom: 1px solid rgba(143,118,54,0.3); position: relative;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 14px;">CONTEXT · 1995—1996</div>
+      <h4 style="font-family: 'Shippori Mincho B1', serif; font-size: 22px; font-weight: 700; margin: 0 0 16px 0;">金沢世界都市構想——eATを生んだ政策フレーム</h4>
+      <p style="font-size: 14.5px; line-height: 1.95;">
+        eAT（1997年開始）は真空の中から生まれたわけではない。その直前の<strong>1995年、山出保市長（就任5年目）は「金沢世界都市構想」を策定</strong>した。これは金沢市の基本構想の一つで、「<strong>新文化の創造 / 自発・未来型産業の育成 / 国際・圏域交流の拡大 / 心のかよう福祉社会の実現 / コミュニティの再生 / 未来を担う人づくり / 人権の尊重 / 住みよい環境づくり</strong>」を8本の柱として、金沢を「世界に通じる個性的な都市」に育てることをビジョンに掲げた（金沢市都市政策局企画調整課）。
+      </p>
+      <p style="font-size: 14.5px; line-height: 1.95; margin-top: 14px;">
+        eATは、この構想の「<strong>新文化の創造</strong>」「<strong>自発・未来型産業の育成</strong>」「<strong>未来を担う人づくり</strong>」の3つの柱を、<em>デジタルアートという一つの装置で同時に実装する施策</em>として企画された。山出は市政と並行して、<strong>金沢市民芸術村（1996年開設）</strong>・<strong>金沢職人大学校（1996年開校）</strong>・<strong>金沢21世紀美術館（2004年開館）</strong>・<strong>金沢能楽美術館（2006年開館）</strong>などの文化インフラを次々と整備していく。eATは<em>「コンテンツとしての祭典」</em>であり、これらのハードと一体で金沢を「創造都市」に変貌させる戦略だった。
+      </p>
+      <div style="margin-top: 20px; padding: 18px 22px; background: rgba(143,118,54,0.08); border-left: 3px solid var(--gold); font-size:14px; line-height:1.95;">
+        <div style="margin-bottom:8px;"><strong>山出の都市思想「都市力 × 都市格」</strong>（趣都金澤対談 2019）：</div>
+        <em>「『都市力』は基盤整備、人でいえば体力や骨格にあたるハード面。『都市格』は、人に人格があるように、都市にも都市格があるべきという考え方で、文化的な側面で捉えるもの。『まちづくりに気品を』との考えです」</em><br>
+        <em>「多様性は可能性を生み、持続性につながる」</em>——eATはこの「都市格」と「多様性」の両方を具現化する装置だった。
+      </div>
+      <p style="font-size: 13px; color: var(--muted); margin-top: 16px; line-height:1.85;">
+        <strong>歴代の基本計画</strong>：第1次「金沢世界都市構想」（1995策定）→「金沢世界都市構想第2次基本計画」（「元気なまち」「美しいまち」「安心して暮らせるまち」）→ 現行の基本構想へ。<em>eATはその全期間を通じて金沢市の主要な文化施策の一つとして維持されてきた</em>。市長交代（山出→山野→村山）を超えてなお途切れず続く事業は、この「政策フレームへの構造的埋め込み」の帰結でもある。
       </p>
     </div>
   </section>
@@ -1278,7 +1280,8 @@
           </p>
           <p style="font-size:13px; color:var(--muted); margin-top:10px;"><em>
             eATが「サブカル／ゲーム／ポップカルチャー」を「デジタルアートの本流」として扱っていた証拠の回。
-            広告・CMの中島と、ゲームの宮本——<strong>日本のポップカルチャーを世界に届けた二人</strong>を同じステージに置いた。金沢美大（公立）が戦後輩出し続けたクリエイター群（細田守、米林宏昌、宮本茂）の一人を、金沢市が公式に顕彰する回でもあった。
+            広告・CMの中島と、ゲームの宮本——<strong>日本のポップカルチャーを世界に届けた二人</strong>を同じステージに置いた。金沢美大（公立）が戦後輩出し続けたクリエイター群（細田守、米林宏昌、宮本茂）の一人を、金沢市が公式に顕彰する回でもあった。<br>
+            <strong style="color:var(--gold)">時期の並行性</strong>：このFY2003（第8回）の数ヶ月後、<strong>2004年10月9日に金沢21世紀美術館（設計：妹島和世＋西沢立衛／SANAA）が開館</strong>。1999年3月SANAA選定、2002年4月起工、2004年8月竣工——<em>つまり第8回eATは、金沢21世紀美術館の工事が最終局面に入っていた時期に開催</em>された。山出保市長は設計時、SANAAに「普段着でも入れる美術館」をオーダー。eATの「気軽にクリエイターと飲み食いする夜塾文化」と、21美の「気軽に入れる美術館」哲学は、同じ市長が同じ時期に設計した2つの装置である。
           </em></p>
         </div>
         <div class="edition-side"><span class="field"><span class="k">名人</span>宮本茂</span><span class="field"><span class="k">総合P</span>中島信也（後の委員長）</span><span class="field"><span class="k">意義</span>ゲーム = アート</span></div>
@@ -1303,6 +1306,9 @@
           <p style="font-size:14px; margin-top:10px;">
             名人賞＝<strong>押井守</strong>（映画監督）。この年は<strong>愛知万博にて中日新聞プロデュース共同館「夢みる山」の映像作品『めざめの方舟』総合演出</strong>を担当した年。『攻殻機動隊 S.A.C. 2nd GIG』（2004-05）も制作中。
           </p>
+          <p style="font-size:13px; color:var(--muted); margin-top:10px;"><em>
+            <strong style="color:var(--gold)">時代的意義</strong>：第9回（2005年開催、FY2004）は<strong>金沢21世紀美術館の開館（2004年10月9日）後初のeAT</strong>。21美は<strong>開館初年度で来館者157万人</strong>を記録（当初目標の30万人を5倍以上上回る）し、金沢を「現代アートを見に行く都市」として世界に発信した年だった。21美が空間で「コンテンポラリーアートの金沢」を体現し、eATは人と対話で「デジタル×食を含むクリエイターの金沢」を体現する——2つの装置が2004年度を境に並行稼働を始めた。
+          </em></p>
         </div>
         <div class="edition-side"><span class="field"><span class="k">名人</span>押井守</span><span class="field"><span class="k">宮田</span>着メロ世界初 → eAT P</span><span class="field"><span class="k">象徴</span>ビジネス概念の導入</span></div>
       </div>
@@ -1636,26 +1642,40 @@
 
           <p style="margin-top:14px"><strong>DAY1（2/7 金 ／ A_RESTAURANT 金沢市片町2-23-12 中央コアビル2F）</strong></p>
           <p style="font-size:13px; color:var(--muted); margin-top:4px;">
-            <em>A_RESTAURANT は2019年10月に OPENSAUCE（孫泰蔵・Mistletoe系）が金沢で開業した<strong>「食の可能性を広げ、食の歓びを進化させる実験場」</strong>。EAT 2020はこの実験場を公式会場として初使用。</em>
+            <em>A_RESTAURANT は<strong>宮田人司（副委員長／モデレーター三人衆）率いるOPENSAUCE</strong>が2019年10月に金沢で展開した「食の可能性を広げ、食の歓びを進化させる実験場」。公式レポート（矢野裕彦）は<strong>「世界中からシェフが集まり、常に新しい料理が生まれる金沢の新名所」</strong>と評した。EAT 2020はこの実験場を公式会場として初使用——つまり宮田の2010年金沢移住→2019年A_RESTAURANT開業→2020年EAT復活の一連のラインがここで合流した。</em>
           </p>
           <p>オープニング：司会 南早苗（EATの「声」）、村山卓・金沢市副市長、モデレーター三人衆（中島・小西・宮田）による趣旨説明。</p>
           <p><strong>スペシャルディナーセッション「Andre Chiang × secca × 髙木慎一朗」</strong> —— テーマ "PERSPECTIVES OF KANAZAWA 〜金沢・新しい視点〜" —— 企画開始は半年前（2019年夏）。<br>
-          アンドレ・チャン（シンガポール「Restaurant ANDRE」2つ星を2018年閉店後、台北<strong>RAW</strong>、成都<strong>The Bridge</strong>、パリ<strong>Porte 12</strong>、マカオ<strong>Sichuan Moon</strong>、台湾<strong>One Tree Hill</strong>など9レストラン9ミシュラン星を展開する世界的シェフ。<strong>ASIA BEST RESTAURANT 50 で2位</strong>の実績）と髙木慎一朗（ミシュラン二つ星「銭屋」／A_RESTAURANT Executive Chef）の共創。secca（上町達也・柳井友一）がこの日のためだけに器を制作——<em>seccaは「世界中のシェフからオファーが殺到する」クリエイティブチーム（PR TIMES 2020.1.16）</em>。<br>
-          ディナー参加費：30,000円（ペアリング込／税別）、20:00開演。</p>
+          アンドレ・チャン（シンガポール「Restaurant ANDRE」2つ星を2018年閉店後、台北<strong>RAW</strong>、成都<strong>The Bridge</strong>、パリ<strong>Porte 12</strong>、マカオ<strong>Sichuan Moon</strong>、台湾<strong>One Tree Hill</strong>など9レストラン9ミシュラン星を展開する世界的シェフ。<strong>ASIA BEST RESTAURANT 50 で2位</strong>の実績。<strong style="color:var(--red)">金沢が大のお気に入りで、住居まで金沢に構えている</strong>ほどの金沢愛好家）と髙木慎一朗（ミシュラン二つ星「銭屋」／A_RESTAURANT Executive Chef）の共創。secca（上町達也・柳井友一）がこの日のためだけに器を制作——<em>seccaは「世界中のシェフからオファーが殺到する」クリエイティブチーム（PR TIMES 2020.1.16）</em>。<br>
+          ディナー参加費：30,000円（ペアリング込／税別）、20:00開演。<strong>2月6日・7日の2日間のみ</strong>限定開催で、7日が新生EAT KANAZAWA の前夜祭を兼ねた。</p>
           <p>全8品：
-          <strong>「六」</strong>六景六味（兼六園6景を再現する味変グミ）／
-          <strong>「霧」</strong>霧の食前酒（米酒＋金沢カレーの霧＋福神漬け串）／
-          <strong>「生」</strong>生食の衝撃（森の苔むした木幹を再現、木片カトラリー）／
-          <strong>「鮮」</strong>圧縮懐石（フグ刺身＋アンコウ肝の真空パック缶）／
-          <strong>「雨」</strong>及時雨（セビーチェ＋金沢の雨を0.1mm穴皿で演出／ネオジム磁石受け皿）／
-          <strong>「真」</strong>真の日本料理（蟹クリームコロッケ＋洋ナシフライ＝美食の街の究極のコンビニスナック）／
-          <strong>「雪」</strong>雪吊り（ロッシーニおにぎり＋雪吊り皿＋ライスパウダー雪化粧）／
-          <strong>「継」</strong>金継ぎ（九谷焼の鉄粉・割れ破片を釉薬で焼き直した皿＋蓮根ムース）。<br>
+          <strong>「六」</strong>六景六味（兼六園6景を再現する白濁グミが舌上で<em>約7秒ごとに淡→酸→甜→苦→鹹→辣と味変</em>／段差のある白皿と水で満たされた杯）／
+          <strong>「霧」</strong>霧の食前酒（米酒＋金沢カレーの香りの霧＋福神漬け串、グラス表面はシャボン玉の泡でふた）／
+          <strong>「生」</strong>生食の衝撃（森の苔むした木幹をナスピューレ・オートミールチップ・メレンゲキノコで再現、木皮をかたどった皿、木片カトラリー、黒い手袋で手づかみ感覚）／
+          <strong>「鮮」</strong>圧縮懐石（フグ刺身＋アンコウ肝・フグ皮の和え物を<strong>銀色の缶詰</strong>で真空パック——「金沢の魚介の鮮度をそのまま缶詰にする」異形の提供法）／
+          <strong>「雨」</strong>及時雨（セビーチェ＋ペルーのタイガーミルクで石川のブリ・アジ・甘エビ／<strong>0.1mm単位で穴径を検証したsecca特製皿</strong>で金沢の雨を演出／ネオジム磁石受け皿でしずくこぼれ防止）／
+          <strong>「真」</strong>真の日本料理（筍の皮の包みに<strong>蟹クリームコロッケ3個＋洋ナシフライ</strong>の"竹串で食べる極上コンビニスナック"——<em>「どこのお店で何を食べてもおいしい金沢」の究極のファストフード構想</em>、トスカーナオレンジワイン「ロンガリコ」とのペアリング）／
+          <strong>「雪」</strong>雪吊り（牛肉・フォアグラ・トリュフの<strong>ロッシーニおにぎり</strong>を雪山模様の紙と白木枝の吊り皿で提供、アンドレ自らライスパウダーで雪化粧）／
+          <strong>「継」</strong>金継ぎ（<strong>九谷焼の鉄粉で市場に出なかった割れ破片</strong>を集めて釉薬をかけて焼き直した皿＋蓮根ムース＋ミルク煮栗＆ヘーゼルナッツ＋温めたミモザソース、金粉で金継ぎを表現）。<br>
           ディナー後：前夜祭（夜塾ミニ版）——宮田人司恒例の「数字の雑学」で「23」の特別さを披露。</p>
 
+          <div style="font-size:14px; line-height:1.85; margin-top:14px; padding: 14px 18px; background: rgba(143,118,54,0.08); border-left: 3px solid var(--gold);">
+            <div style="margin-bottom:8px;"><strong>Andre Chiang シェフの公式コメント</strong>（ディナー終了後、矢野裕彦レポート）：</div>
+            <div style="font-style:italic;">「金沢に対する私の視点というものを料理に込めて表現することができました。私の料理を通して、金沢に住んでいる方にも、金沢にやってこられた方にも、あらためていろいろな金沢を知ってもらえたと思います。その体験を皆さんがすごく喜んでくれている姿を見ていて、とてもうれしい気持ちになりました」</div>
+          </div>
+
           <p style="margin-top:14px"><strong>DAY2（2/8 土 ／ 花鏡庵金沢（旧 壽屋）金沢市尾張町2-4-13）</strong></p>
+          <p style="font-size:13px; color:var(--muted); margin-top:4px;">
+            <em>花鏡庵金沢は築160年を越える金澤町家の料亭で、<strong>その2階に米国のアニメーションスタジオ「TONKO HOUSE JAPAN」が新スタジオ開設準備中</strong>（2020時点）。EATがここで開催された理由は、ゲスト堤大介ら TONKO HOUSE が日本拠点を置く場所だったから。会場内にはトンコハウス制作のアニメキャラクターのクレイモデルが各所に置かれ、<em>「何か面白いものが生まれてきそうなクリエイティブな空気感」</em>が醸し出されていた（矢野裕彦レポート）。</em>
+          </p>
           <p>「新生EAT KANAZAWAどうすんの？会議」（モデ三人衆）／
-          ゲストプレゼンテーション：平野紗季子（フードエッセイスト）、田中開（the OPEN BOOK）、堤大介（TONKO HOUSE）、<strong>山本麻友美</strong>（LeaR inc.代表／<strong>金沢美術工芸大学副学長</strong>——金沢美大とEATの制度的接続を象徴する登壇）。</p>
+          ゲストプレゼンテーション（人選：小西利行）：<strong>平野紗季子</strong>（フードエッセイスト、食の場メディア<strong>「APPE-TIDE」</strong>起ち上げ中、<em>「より良い食とは、誰かを変える力がある"種"」</em>）、<strong>田中開</strong>（the OPEN BOOK ／祖父は作家・田中小実昌、新宿ゴールデン街レモンサワーの店＋日本橋兜町「青淵（アオ）」築100年旧第一銀行支店を渋沢栄一コンセプトでリノベ）、<strong>堤大介 "Dice Tsutsumi"</strong>（TONKO HOUSE／元Pixarのトイ・ストーリー3・モンスターズユニバーシティAD／2014年独立／『The Dam Keeper』米アカデミー賞短編アニメーション部門ノミネート／ミッション<em>「CuriosityをInspireしよう」</em>）、<strong>山本麻友美</strong>（LeaR inc.代表／<strong>金沢美術工芸大学副学長</strong>——金沢美大とEATの制度的接続を象徴する登壇／TONKO HOUSE日本PR／2019年『トンコハウス映画祭』クラウドファンディング1,200万円超調達、<em>金沢提案「クリエイティブコミューン特区」＝落書きOK・ドローン飛ばし放題</em>）。</p>
+
+          <div style="font-size:14px; line-height:1.85; margin-top:14px; padding: 14px 18px; background: rgba(184,53,47,0.06); border-left: 3px solid var(--red);">
+            <div style="margin-bottom:8px;"><strong>小西利行（モデレーター／2017年総合P）の歴史的総括</strong> —— 平野紗季子プレゼン後のコメント：</div>
+            <div style="font-style:italic; margin-bottom:10px;">「食というジャンルがクリエイティブのひとつとして認められ、シェフがクリエイターとしてリスペクトされています。テクノロジーやアートが中心だった"eAT"から"EAT"に変わった今回は、<strong>食の文脈でストーリーを語り始める人が参加してくれるターニングポイント</strong>なのかなと、あらためて思いました」</div>
+            <div style="font-size:13px; color:var(--muted);">23年間の eAT（electronic Art Talent）から EAT（食文化）への転換が、参加者構成の段階で実現した瞬間を総合Pがその場で言語化した証言。</div>
+          </div>
 
           <div style="font-size:14px; line-height:1.85; margin-top:14px; padding: 14px 18px; background: rgba(143,118,54,0.06); border-left: 3px solid var(--gold);">
             <div style="margin-bottom:8px;"><strong>中島信也（実行委員長）の重要証言</strong> —— 堤大介（TONKO HOUSE）プレゼン後のコメント：</div>
@@ -1671,16 +1691,17 @@
 
           <p style="margin-top:14px"><strong>DAY-2 午後：「新生EAT KANAZAWAどうすんの？会議」登壇者全員によるトークセッション</strong></p>
           <div style="font-size:14px; line-height:1.9; margin-top: 6px;">
-            <div style="margin-bottom:10px;"><strong>土佐信道（明和電機）</strong>：「鎖国食」構想（「大豆の95%は輸入、鎖国すると納豆・味噌・醤油・豆腐が全部消える」）＋新作楽器<strong>「SUSHI BEAT!」</strong>（IKA/TAMAGO/EBI/MAGUROの4ネタで合奏）披露。</div>
+            <div style="margin-bottom:10px;"><strong>土佐信道（明和電機）</strong>：新作楽器<strong>「SUSHI BEAT!」</strong>（IKA/TAMAGO/EBI/MAGUROの4ネタで合奏）披露＋<em>「鎖国食」構想</em>（「大豆の95%は輸入、鎖国すると納豆・味噌・醤油・豆腐が全部消える」）。また昨夜のディナーについて<em>「seccaの雪吊り皿は紐で釣ってあったけど、きれいにピンと張っていた。普通こういう工作は紐のどこかに緩みが出るもの。一本一本調整していたと聞いて、すごいこだわりを感じた」</em>とエンジニア視点で職人技に感嘆。</div>
             <div style="margin-bottom:10px;"><strong>菱川勢一</strong>：徳島県で<strong>民間54年ぶりの高専設立</strong>を準備中（→後の2023年「神山まるごと高専」）。「学生がメンタルをやられている、高校での“これをやりなさい”教育が目的を失わせる」。</div>
-            <div style="margin-bottom:10px;"><strong>孫泰蔵</strong>（Mistletoe）：VIVITAで子ども向けクリエイティブ・コミュニティを展開（柏の葉、ハワイ、フィリピン、博多、シンガポール、エストニア）。<em>「学習効率が最も高いのは遊んでいるとき。EAT KANAZAWAは思い切り遊べる場であってほしい」</em>。</div>
-            <div style="margin-bottom:10px;"><strong>秋山具義</strong>：岸田周三（カンテサンス）× ドラマ『グランメゾン東京』の例を引き「料理人が主役のドラマで子どもたちが憧れる職業を増やす」提言。</div>
+            <div style="margin-bottom:10px;"><strong>孫泰蔵</strong>（Mistletoe）：VIVITAで子ども向けクリエイティブ・コミュニティを展開（柏の葉、ハワイ、フィリピン、博多、シンガポール、エストニア）。<em>「学習効率が最も高いのは『遊んでいるとき』という研究結果が出ている。でも実際は勉強しようとして学ぶことが多い。それは最も効率が悪い状態で、<strong>サイドブレーキを引きっぱなしの車で走っているようなもの</strong>。EAT KANAZAWAは思い切り遊べる場であってほしい」</em>／<em>「昨晩のアンドレシェフと髙木シェフのディナーを見て、クリエイターがやりたいことをやるという状況がこんなにすごいクリエイションを生むということに度肝を抜かれた」</em>。</div>
+            <div style="margin-bottom:10px;"><strong>秋山具義</strong>：<em>「広告界で一番グルメな人と思われようと活動してきたけど、クリエイティブ業界での食のライバルが平野紗季子さん、レモンサワーのライバルが田中開君」</em>というeAT内人脈コメントの後、岸田周三（カンテサンス）× ドラマ『グランメゾン東京』の例を引き「木村拓哉さんが美容師役の『ビューティフルライフ』以後に美容師志望が増えた前例にならって、料理人が主役のドラマで子どもたちが憧れる職業を増やす」提言。<em>「EAT KANAZAWAでは子どもたちがいろいろな職業に憧れる場を作っていけるといい」</em>。</div>
             <div style="margin-bottom:10px;"><strong>原雄司</strong>（DIGITAL ARTISAN）：息子のロボット博士志望と石黒浩先生との邂逅を紹介。DIGITAL ARTISANキッズ構想。</div>
             <div style="margin-bottom:10px;"><strong>REATMO</strong>：「長野の閉鎖的環境で居場所がなかった。ビートボックスと音楽に夢中になって自分で居場所を作った。Maroon 5はビッグネームなのに好奇心がものすごく強い」。</div>
-            <div style="margin-bottom:10px;"><strong style="color:var(--red)">北川 力（WOTA）</strong>：<em>「水はどこに行っても何をやっていても世界共通でつながることができる。日本や中国は軟水なので水墨画文化が発展し、硬水のヨーロッパは繊細な表現ができず油絵のどぎつい表現になった。地域の文化のベースにあるのは水」</em> —— 文化と水の関係性という独自の視点を披露。</div>
-            <div style="margin-bottom:10px;"><strong>加藤拓</strong>（演出家）：中国・8K撮影現場で200人の現地スタッフ、19歳の劉くんが仕切るパワフルさに「打ちのめされた」エピソード。</div>
-            <div style="margin-bottom:10px;"><strong>山口裕美</strong>：「努力は情熱にかなわない」。今年明治神宮100周年記念で現代アート展示をプロデュース中。</div>
-            <div style="margin-bottom:10px;"><strong>林信行</strong>：「テクノロジー→デザイン→アートと追う対象が変わってきた。スマートフォン以降の未来を創るのはアートや哲学じゃないか」。</div>
+            <div style="margin-bottom:10px;"><strong style="color:var(--red)">北川 力（WOTA）</strong>：モデレーターから「なぜ水に夢中になったのか？」という好奇心の源泉について問われて——<br>
+            <em>「水に興味を持ったきっかけは、どこに行っても、何をやっていても、水については世界共通でつながることができるというのがひとつ。それと僕には恩師がいて、先生にはよく『何をやればいいのか』という相談をしていたんですが、いつも『とにかく好きなことをやればいい』と背中を押してくれていた。そうやって僕の知的好奇心の広がりを妨げないようにしてくれたおかげで、自分でどんどん掘り下げて研究することができた」</em>／<em>「水はいろいろな文化のベースになっています。食と水の関係などわかりやすいと思うのですが、<strong>水とアートの関係</strong>というのもあって、日本や中国は軟水なので水彩画や水墨画の文化が発展しましたが、硬水のヨーロッパではうまく墨が扱えないので繊細な表現ができず、だから油絵のどぎつい表現になっていたという話もあります。地域の文化のベースにあるのは水なんです」</em> —— 文化と水の関係性という独自の視点を披露。</div>
+            <div style="margin-bottom:10px;"><strong>加藤拓</strong>（演出家）：<em>「枠組みや条件の中でのほうが仕事がしやすい」</em>と前置きし、中国での8K撮影体験を紹介。<em>「20人の体制で中国に行ったら、現地では<strong>200人の大量スタッフ</strong>が待ち構えていた。その中に30人の『場巧（じょうこう）さん』——レールは敷く、水は運ぶ、弁当は配る、スモークを焚く何でもやる人——がいて、それを仕切っていたのが<strong>劉くんという若干19歳の若者</strong>。パワーの源泉は現在の中国の右肩上がりの産業の勢いとプライド」</em>と圧倒された体験を披露。一方で<em>「今日の若い人たちの話を聞いて、既存の枠組みを突き破る人たちが日本からもたくさん出てきている」</em>と結んだ。</div>
+            <div style="margin-bottom:10px;"><strong>山口裕美</strong>：<em>「努力は情熱にかなわない」</em>／<em>「アートが病的に好きだったので業界のことは知っている。アートの世界はとても狭くて保守的。東京藝大を首席で卒業しても食べていけない——おかしいじゃないか！　私はアートを好きになったのは"病気"で、そこに注ぎ込む情熱は"怒り"」</em>。2020年は明治神宮100周年記念で現代アート展示をプロデュース中。</div>
+            <div style="margin-bottom:10px;"><strong>林信行</strong>（ジャーナリスト）：大学のカリキュラム作りを長年手伝ってきた経験を語る。<em>「時間をかけて面白い案が出ても、実際のシラバスに落とすと興味が湧かない内容になってしまう。<strong>学生のモチベーションを高めるアクションを取ろうとすると、戦わなければならない何かが社会には存在する</strong>」</em>と教育システムの硬直を指摘。自身の関心は<em>「テクノロジー→デザイン→アートと追う対象が変わってきた。スマートフォン以降の未来を創るのはアートや哲学じゃないか」</em>。</div>
             <div style="margin-bottom:10px;"><strong>菊川裕也</strong>（No new folk studio）：スマートシューズで歩容データから健康状態を読むプロジェクト。<em>「学ぶべきは大人のほう。子どもには希望があるが、聞いている大人の方がヤバい」</em>。</div>
             <div style="margin-bottom:10px;"><strong>山本雅也</strong>（KitchHike）：<em>「60-70年代はミュージシャン、80-90年代は建築家、90-00年代は広告、2010年代は食に関わる人たちが時代の空気感を作っている」</em> —— 世代ごとの「空気を作る職業」論。</div>
           </div>
@@ -1751,26 +1772,37 @@
       <div class="edition">
         <div class="edition-no"><span class="nth-big">第26回</span><span class="year">2023</span><span class="fy">FY2022</span><span class="era">令和4年度</span></div>
         <div class="edition-body">
-          <h4>EAT KANAZAWA 2023（開催されたと強く推定／一次情報は継続調査中）</h4>
-          <p style="font-size:14px">
-            <strong>通算第26回として開催されたと強く推定される</strong>。根拠は以下の公式言明の連番整合：
+          <h4>3/25（土）金沢市文化ホール 2F 大集会室（金沢市高岡町15-1）／ 13:00-17:30 ／ 定員100名・無料</h4>
+          <p class="theme">テーマ：捨てる、繋ぐ、創る</p>
+          <p style="font-size:14px; margin-top:10px;">
+            通算第26回。主催：EAT KANAZAWA実行委員会（<span style="font-family:'JetBrains Mono',monospace;font-size:12px">eat-kanazawa@cll.or.jp</span>）。申込は eatkanazawa2023.peatix.com で先着順100名。
           </p>
-          <ul style="font-size:13px; line-height:1.85; margin:8px 0 8px 20px; padding:0;">
-            <li><strong>金沢経済新聞 2026.3.3</strong>「実行委員会と金沢市が企画し、今年で<strong style="color:var(--red)">29回目</strong>」 → 2026年＝第29回</li>
-            <li><strong>ISICO 2025告知</strong>「今年で<strong>28回目</strong>」 → 2025年＝第28回</li>
-            <li><strong>Instagram公式 @eat.kanazawa</strong>「1997年以降28年にわたり開催」 → 1997-2025で休止1回を引くと28年</li>
-            <li>1997の第1回から数え、2019年度（FY2018）のみ休止すると、<strong>1997-2018で22回 ＋ 2020-2026で7回 ＝ 29回</strong>で完全整合</li>
-            <li>従って2024年＝第27回、<strong>2023年＝第26回</strong>、2022年＝第25回 が確定</li>
-          </ul>
-          <p style="color:var(--muted); font-size:13px; margin-top:8px"><em>
-            ※ 金沢経済新聞2024年3月27日の第27回（2024）レポートは「今年で26年目」と書いているが、これは「26回目」の意ではなく「26年続く」の慣用的表現。厳密には2024年は開始から28年目にあたるため、取材時の曖昧な言及と推定される（2026年の同紙記事では「29回目」と正確に記載）。
-          </em></p>
-          <p style="color:var(--muted); font-size:13px; margin-top:8px"><em>
-            2023年開催の一次情報は現時点でオンラインで未取得。<br>
-            次の調査対象：①Instagram公式の2023年春の過去投稿、②金沢市 経済局ものづくり産業支援課の事業報告書、③登壇者のSNS、④EAT実行委員会メンバーへの直接照会。
-          </em></p>
+          <p style="font-size:14px; margin-top:10px;">
+            <strong>告知文</strong>：<em>「現在の常識が非常識とされる世界が広がり、『生きる』という定義すらアップデートされ得る近未来に、私たちは一体、何に心躍らせ、心満たすのか。そのために、何を捨て、何を未来に繋ぎ、どんな世界を創るのか」</em>（金沢未来のまち創造館公式）。
+          </p>
+          <p style="font-size:14px; margin-top:10px;">
+            <strong>ST01「冒険の書、思考の旅」13:15-14:35</strong><br>
+            SPECIAL GUEST：<strong>孫泰蔵</strong>（連続起業家／ベンチャー投資家／作家——同年3月に刊行された著書『<em>冒険の書</em>』がセッションタイトルに直結、Mistletoe創業者）。<br>
+            GUEST：あけたらしろめ（モノクロ画家）／<strong>宮田人司（スナックオーナー）</strong>——EAT初の「スナックオーナー」肩書での登壇。OPENSAUCE系の新業態と推測される。
+          </p>
+          <p style="font-size:14px; margin-top:10px;">
+            <strong>ST02「繋ぐこと」14:45-15:55</strong><br>
+            GUEST：小西利行（POOL INC, CEO／クリエイティブ・ディレクター）／菱川勢一（映像工芸作家・写真家・<strong>武蔵野美術大学教授</strong>・DRAWING AND MANUALファウンダー）／山口裕美（アートプロデューサー）／<strong>どろだんご先生（砂場研究家）</strong>——<em>吉本興業所属・株式会社SUNABA CEO・あだ名「ドロシー」・世界2700カ所以上の砂場を巡り、保育施設/園庭/公園のプロデュースとピカピカどろだんごワークショップを全世界で実施。京都教育大学・加用文男教授（「光れ！泥だんご」NHK 2001）の系譜を受け継ぐ。第23回2020中島証言「当初は子どもといっしょの教育イベント」の原点回帰を象徴</em>／山本雅也（株式会社キッチハイク代表取締役CEO・<strong>保育園留学 主宰</strong>——第23回2020からの2度目登壇）／<strong>友廣裕一</strong>（合同会社シーベジタブル共同代表——<em>2016年設立、共同代表・蜂谷潤（高知大学海藻研究者）と、世界初の地下海水を利用した海藻陸上養殖モデルを確立。高知県安芸市本社＋岩手/三重/愛媛/熊本に拠点。「海藻で海も人もすこやかに」をモットーに磯焼け（海の砂漠化）問題にも挑む。2025年5月テレビ東京「カンブリア宮殿」出演</em>）／<strong>三石晃生</strong>（株式会社goscobe代表取締役社長・<strong>ヒストリーコンサルタント</strong>——<em>1981年東京生まれ、温故學會・塙保己一史料館（渋沢栄一らが設立）の研究員・監事。2017年「世界初の歴史コンサルティング会社goscobe（グスコーブ）」設立——専門は「老舗・伝統企業・地方創生」。日本財団×東大先端研の異才発掘プロジェクト「ROCKET」史学担当外部講師。金沢＝伝統工芸の街との親和性から登壇へ</em>）。
+          </p>
+          <p style="font-size:14px; margin-top:10px;">
+            <strong>ST03「創ること」16:05-17:15</strong><br>
+            GUEST：中島信也（「なかじましんやオフィス」CMディレクター・東北新社ECD・<strong>金沢工業大学客員教授</strong>——実行委員長本人の初の客員教授肩書）／<strong>廣川玉枝</strong>（SOMA DESIGN Creative Director・Designer——三宅一生の系譜のファッションデザイナー）／秋山具義（デイリーフレッシュ株式会社 代表取締役／クリエイティブディレクター／アートディレクター）／<strong>樋口真嗣</strong>（「<em>映画監督とか</em>」・金沢工業大学客員教授——『シン・ゴジラ』『シン・ウルトラマン』共同監督、自己紹介「とか」の脱力ユーモア）／加藤拓（ドラマディレクター——第23回2020からの2度目登壇）／REATOMO（進化形ヒューマン・ビートボクサー／音楽プロデューサー——第23回2020からの2度目登壇）／<strong>金丸義勝</strong>（A440 Inc. Producer & CEO）。
+          </p>
+          <div style="background: rgba(184,53,47,0.06); border-left: 3px solid var(--red); padding: 12px 16px; margin: 14px 0; font-size:13px; line-height:1.85;">
+            <strong>第26回の構造的意義</strong>：<br>
+            ① <strong>テーマ「捨てる、繋ぐ、創る」</strong>は孫泰蔵『冒険の書』（2023.3刊）の問題意識と響き合う——<em>「何を捨てて、何を次世代に繋ぐか」</em>という循環経済・教育改革の中核思想。<br>
+            ② <strong>17名という過去最大級の登壇者数</strong>で、2019年休止→2020年復活→2021年オンライン→2022年ハイブリッド期を経て、<em>2023年で完全にオフライン登壇スタイルが復元</em>した。<br>
+            ③ <strong>金沢工業大学との接続</strong>：中島信也・樋口真嗣の2名が「金沢工業大学客員教授」肩書で登壇——<em>金沢美大に続く第二の大学的なベースが可視化された回</em>。<br>
+            ④ <strong>原点回帰の明示</strong>：どろだんご先生（砂場研究家）という異色の登壇は、初代委員長・浜野保樹のキッズ教育工学の系譜と、<em>第28回2025から本格化するINAZUMA子どもピッチへの助走</em>に位置付けられる。<br>
+            ⑤ <strong>第23回ゲストの再招聘</strong>：山本雅也・加藤拓・REATOMO が2020→2023で再登壇——新生EAT KANAZAWA が「毎年違うゲスト」から「コミュニティ化したゲスト」モデルに移行していることを示す。
+          </div>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">確定根拠</span>金沢経済新聞 2026「今年で29回目」</span><span class="field"><span class="k">逆算</span>2026=29 → 2023=26</span><span class="field"><span class="k">休止</span>FY2018の1回のみ</span><span class="field"><span class="k">開催記録</span>継続調査中</span></div>
+        <div class="edition-side"><span class="field"><span class="k">会場</span>金沢市文化ホール</span><span class="field"><span class="k">テーマ</span>捨てる、繋ぐ、創る</span><span class="field"><span class="k">登壇</span>17名/3セッション</span><span class="field"><span class="k">特別</span>孫泰蔵『冒険の書』直結</span><span class="field"><span class="k">原点回帰</span>どろだんご先生</span><span class="field"><span class="k">主催</span>EAT実行委員会</span></div>
       </div>
 
       <div class="edition">
@@ -1802,18 +1834,23 @@
           <p>
             <strong>ST01「"アニメーション"の未来を面白がる人びと」</strong><br>モデ：宮田人司（Mistletoe JAPAN / TONKO HOUSE JAPAN）／米倉千貴（オルツ代表）・林ゆうき（作曲家）・加藤拓（NHKドラマ演出家）。<br><br>
             <strong>ST02「"伝統文化"の未来を面白がる人びと」</strong><br>モデ：上町達也（secca）／ミヤタコーヘイ（black adder）・池田佳乃子（HAA）・桂枝之進（落語家）。<br><br>
-            <strong>ST03「"酒造り"の未来を面白がる人びと」</strong><br>モデ：小西利行（POOL INC.）／稲垣貴彦（若鶴酒造／三郎丸蒸留所）・田中勝己（甍酒造）・中川俊彦（Alembic）。
+            <strong>ST03「"酒造り"の未来を面白がる人びと」</strong><br>モデ：小西利行（POOL INC.）／稲垣貴彦（若鶴酒造／三郎丸蒸留所）・田中勝巳（甍酒造）・中川俊彦（Alembic）。
           </p>
           <p style="font-size:13px; color:var(--muted); margin-top:8px"><em>
-            通算第28回。ISICO公式告知に<strong>「今年で28回目」</strong>と明記。
+            通算第28回。ISICO公式告知に<strong>「今年で28回目」</strong>と明記。定員200名・入場無料。<br>
+            スピーカー陣の産業背景：<br>
+            ・ST01：米倉千貴が代表を務める<strong>オルツ</strong>は「AIクローン」「P.A.I.（パーソナル人工知能）」事業で2024年10月東証グロース上場。加藤拓（NHK）・林ゆうき（『相棒』『コード・ブルー』『ハイキュー!!』等の劇伴作曲家）と並び、<em>映像・音楽・AIの三者が同セッションに</em>。<br>
+            ・ST02：<strong>ミヤタコーヘイ</strong>は東京藝大卒の異色のクラシックチェリスト。<strong>池田佳乃子（HAA）</strong>は茶室空間デザイン・茶道具プロデュース。<strong>桂枝之進（10代目／Z落語）</strong>は「Z世代による伝統落語」で話題のTikTokフォロワー15万人の落語家。<br>
+            ・ST03：石川・富山の蒸留・醸造現場の代表格。<strong>三郎丸蒸留所の稲垣貴彦</strong>は日本の地ウィスキーを世界ブランドに押し上げた立役者。<strong>Alembic（中川俊彦）</strong>は日本初のクラフトジン専業蒸留所。
           </em></p>
           <div style="background: rgba(143,118,54,0.06); border-left: 3px solid var(--gold); padding: 12px 16px; margin: 10px 0; font-size:13px; line-height:1.8;">
             <strong>原点回帰：子どもピッチイベント「INAZUMA」との合同開催</strong><br>
-            2月22日（土）に子どもたちのピッチイベント「INAZUMA」を併催。<strong>22日夜には「EAT & INAZUMA PARTY」</strong>を合同開催し、ミヤタコーヘイのライブパフォーマンス、桂枝之進（10代目／「Z落語」）の落語会を実施。<br>
-            <span style="color:var(--muted);">初代委員長・浜野保樹が設計した「キッズ・クリエイティブ教育」の原点に、世代交代を経た今も回帰している。第20回（2011）まで存在した「ジュニア部門」、こども塾vol.3、そしてINAZUMAへと系譜が続いている。</span>
+            2月22日（土）に子どもたちのピッチイベント「INAZUMA」を併催。<strong>22日夜には「EAT & INAZUMA PARTY」</strong>を<strong>A_RESTAURANT</strong>（第23回と同じ会場）で合同開催：
+            <em>19:00開演／一般4,000円（3,000円分のフード＆ドリンクチケット付）・学生2,500円（2,000円分付）</em>。ミヤタコーヘイのライブパフォーマンス、桂枝之進のZ落語会を実施。<br>
+            <span style="color:var(--muted);">初代委員長・浜野保樹が設計した「キッズ・クリエイティブ教育」の原点に、世代交代を経た今も回帰している。第20回（2011）まで存在した「ジュニア部門」、こども塾vol.3、そしてINAZUMAへと系譜が続いている。<strong>ミヤタコーヘイは第28回での登場を経て、翌第29回（2026）では村山卓市長とチェロ×フルートで共演</strong>する——eATの「登壇→ジンクス→金沢深掘り」の流れが最新回で実現した実例。</span>
           </div>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">定員</span>200名 無料</span><span class="field"><span class="k">主催</span>金沢市＋EAT実行委員会</span></div>
+        <div class="edition-side"><span class="field"><span class="k">定員</span>200名 無料</span><span class="field"><span class="k">PARTY</span>A_RESTAURANT</span><span class="field"><span class="k">主催</span>金沢市＋EAT実行委員会</span></div>
       </div>
 
       <div class="edition">
@@ -2047,6 +2084,70 @@
         そして山出保は<strong style="color:var(--red)">2025年7月14日に肺炎のため逝去（93歳）</strong>。金沢21世紀美術館、金沢市民芸術村、金沢職人大学校、金沢能楽美術館、泉鏡花記念館など、金沢の文化インフラ多くを自らの手で設計した市長の死は、30周年を迎えるEATにとって、浜野保樹に続く「思想的父の喪失」となった。
       </p>
 
+      <h3 style="font-family: 'Shippori Mincho B1', serif; font-size: 20px; font-weight: 700; margin: 40px 0 16px 0; padding-bottom: 8px; border-bottom: 1px solid var(--ink);">⑤ 3代の市長による政治的連続性</h3>
+
+      <p>
+        eATが30年続いた決定的な条件として、市長の交代による事業中断が一度もなかった点が挙げられる。金沢市は1990年から2026年までの36年間に<strong>山出保→山野之義→村山卓</strong>の3代の市長を経ているが、3代とも eAT への支援を継続してきた。
+      </p>
+
+      <!-- 3代市長タイムライン -->
+      <div style="margin: 30px 0; padding: 28px 32px; background: var(--paper-dark); border-left: 4px solid var(--ink);">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 28px;">
+          <!-- 山出保 -->
+          <div style="display: grid; grid-template-columns: 120px 1fr; gap: 20px; align-items: start;">
+            <div>
+              <div style="font-family: 'Bodoni Moda', serif; font-weight: 700; font-size: 22px; color: var(--red); line-height: 1;">1990 <span style="font-size:14px; color:var(--muted)">−</span> 2010</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--muted); margin-top: 4px;">5 TERMS · 20 YEARS</div>
+            </div>
+            <div>
+              <div style="font-family: 'Shippori Mincho B1', serif; font-weight: 700; font-size: 18px;">山出 保（やまで たもつ）<span style="font-size:13px; color:var(--muted); font-weight:400;">　1931.11.27—2025.7.14（93歳）</span></div>
+              <div style="font-size: 13px; line-height: 1.9; margin-top: 8px;">
+                1931年金沢生まれ、金沢大学法文学部卒、1954年金沢市役所入庁。企画課長・財政課長・財務部長・助役を経て1990年市長初当選、<strong>5期20年</strong>。全国市長会会長（第26代、2003-2007）、金沢21世紀美術館・金沢市民芸術村・金沢職人大学校を整備、旧町名復活運動を全国に先駆けて実施。<strong>1996年度にeAT創始を決断</strong>、東京大学・浜野保樹を初代実行委員長に指名。レジオン・ドヌール勲章シュバリエ章（2010）、日本イコモス賞（2015）、金沢市名誉市民証（2013）。
+              </div>
+            </div>
+          </div>
+
+          <!-- 山野之義 -->
+          <div style="display: grid; grid-template-columns: 120px 1fr; gap: 20px; align-items: start; border-top: 1px dashed var(--muted); padding-top: 24px;">
+            <div>
+              <div style="font-family: 'Bodoni Moda', serif; font-weight: 700; font-size: 22px; color: var(--red); line-height: 1;">2010 <span style="font-size:14px; color:var(--muted)">−</span> 2022</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--muted); margin-top: 4px;">3 TERMS · 12 YEARS</div>
+            </div>
+            <div>
+              <div style="font-family: 'Shippori Mincho B1', serif; font-weight: 700; font-size: 18px;">山野 之義（やまの ゆきよし）<span style="font-size:13px; color:var(--muted); font-weight:400;">　1962年金沢市生まれ</span></div>
+              <div style="font-size: 13px; line-height: 1.9; margin-top: 8px;">
+                慶應義塾大学文学部仏文科卒（1987）→<strong>日本ソフトバンク入社（1990-1994）</strong>→1995年金沢市議初当選（以降4期）→<strong>2010年金沢市長就任（3期12年）</strong>。金沢マラソン開始、金沢市のDX化推進、パートナーシップ宣誓制度導入。eAT実行委員会会長として<strong>第17回（2013）開会挨拶</strong>に登壇、「一つ一つの地道な問題解決の積み重ねが未来を作る」と講演。2022年石川県知事選立候補のため退任（落選）、以降ソフトバンク戦略顧問・金沢大学客員教授。
+                <strong>IT業界出身の市長</strong>であったことは、eATが「エレクトロニック・アート・タレント」として最先端技術を扱う祭典であることへの政治的な追い風となった。
+              </div>
+            </div>
+          </div>
+
+          <!-- 村山卓 -->
+          <div style="display: grid; grid-template-columns: 120px 1fr; gap: 20px; align-items: start; border-top: 1px dashed var(--muted); padding-top: 24px;">
+            <div>
+              <div style="font-family: 'Bodoni Moda', serif; font-weight: 700; font-size: 22px; color: var(--red); line-height: 1;">2022 <span style="font-size:14px; color:var(--muted)">−</span></div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--muted); margin-top: 4px;">INCUMBENT</div>
+            </div>
+            <div>
+              <div style="font-family: 'Shippori Mincho B1', serif; font-weight: 700; font-size: 18px;">村山 卓（むらやま たかし）<span style="font-size:13px; color:var(--muted); font-weight:400;">　1972年東京都練馬区生まれ</span></div>
+              <div style="font-size: 13px; line-height: 1.9; margin-top: 8px;">
+                慶應義塾大学総合政策学部卒（1996）→自治省→総務省→仙台市→愛媛県→川崎市財政部長→香川大学大学院地域マネジメント研究科教授→防衛省日米防衛協力課企画官→<strong>2019年4月金沢市副市長（山野市政下）</strong>→2022年3月13日の金沢市長選で新人を<strong>3万1467票差の圧勝</strong>で初当選（自民・公明支援、無所属、得票7万9496票）。新市長誕生は山出退任以来12年ぶり。
+                当選時のコメント：<em>「山出、山野市政とつないできた系譜をしっかり次につなぐことが私の役目」</em>。<br>
+                <strong>趣味はフルート演奏</strong>、市民管弦楽団所属、妻みほとさんもフルート奏者。「いしかわ金沢風と緑の楽都音楽祭」に出演経験。<br>
+                eATへの関与：<strong>第23回（2020）</strong>に副市長としてオープニング登壇→<strong>第29回（2026）</strong>に市長として自ら<strong>フルート演奏でステージ参加</strong>（ミヤタコーヘイのチェロと即興共演）——金沢市長自身がeATの舞台に立った初めての回となった。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:20px;">
+        山出（行政叩き上げ・文化政策）／山野（ソフトバンク出身・DX推進）／村山（総務省官僚・フルート奏者）——三者三様の背景を持つ市長たちが、それぞれの立場からeATを支えてきた。<strong>創始者の山出が2025年7月に逝去した直後、2026年2月の第29回で後継の村山がステージに立ったこと</strong>は、象徴的な世代交代の光景でもあった。</p>
+
+      <p style="margin-top:12px;">
+        <em>「eATが30年続いたのは、金沢市という自治体が3代にわたって『モノマネをしない人』——山出の言葉——を支持し続けたから」</em>と総括できる。文化政策の核に「クリエイター」という概念を置いた1990年代の山出の政治判断が、その後の35年を規定した。
+      </p>
+
       <div style="margin-top: 40px; padding: 30px 36px; background: rgba(26,24,20,0.04); border-left: 3px solid var(--gold); font-family: 'Shippori Mincho B1', serif; font-size: 15px; line-height: 2;">
         <em>「2006年くらいから、東京でも『金沢行ったことある？』ってちらほら聞くようになって。<br>だから、実はクリエイターから金沢の良さが伝播していったんじゃないかと思っているんです」</em>
         <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-top: 14px; letter-spacing: 0.1em; color: var(--muted);">—— 宮田人司（第9回総合P／モデレーター三人衆）</div>
@@ -2166,9 +2267,9 @@
         宮田自身の言葉を借りれば——<em>「eATに呼ばれないと一流のクリエイターじゃない、という雰囲気までありました」「eATがなかったら、いま僕はここにいない」</em>（reallocal 2017後編）。
       </p>
       <p style="margin-top:20px">
-        <strong>初代実行委員長 浜野保樹</strong>は、兵庫県高砂市生まれ。国際基督教大学卒業後に渡米し、<strong>ハーバード大学教育大学院教育工学センター客員研究員、バンクストリート大学子どもテクノロジーセンター客員研究員</strong>を経て、メディア教育開発センター（旧・放送教育開発センター）、東京大学大学院情報学環を歴任した日本のメディア学の代表的論者。
-        著書に『メディアの世紀』『極端に短いインターネットの歴史』（晶文社 1997——<em>eAT元年と同年刊行</em>）『デジタル革命の衝撃』『模倣される日本』『偽りの民主主義』『大系 黒澤明（全4巻）』など。アラン・ケイ『マルチメディア 21世紀のテクノロジー』（岩波書店 1993）の翻訳・監修も担当。
-        <strong style="color:var(--red)">2014年1月3日逝去（享年62）</strong>。その3週間後に開催された第18回eAT（2014年1月24日）は、浜野を失った後の最初の会となった。
+        <strong>初代実行委員長 浜野保樹</strong>（1951.4.11）は兵庫県高砂市生まれ。<strong>1975年国際基督教大学卒</strong>、1977年渡米し<strong>ハーバード大学教育大学院教育工学センター客員研究員、バンクストリート大学子どもテクノロジーセンター客員研究員</strong>を経て、1980年ICU大学院博士後期課程単位取得退学、1982年新潟大学助手、1983年メディア教育開発センター（旧・放送教育開発センター）助教授、1999年東大情報学研究科助教授、<strong>2003年「コンテント制作のロジスティックスに関する研究」で東京大学工学博士</strong>、2004年東京大学大学院新領域創成科学研究科教授、2012年東京大学名誉教授・東京工科大学メディア学部教授を歴任した日本のメディア学の代表的論者。<em>黒澤明作品の助監督も務めた</em>経歴を持ち、<strong>黒澤明文化振興財団理事</strong>も務めた。映像論・アニメ評論の著訳書のほか、スタンリー・キューブリック関連の訳書——『映画監督 スタンリー・キューブリック』（V.ロブロット著、晶文社2004）、『スタンリー・キューブリック 写真で見るその人生』（C.キューブリック著、愛育社2004）——も著名な、映像の実務と理論の両軸に通じた人物。黒澤生誕100年に合わせて2009-2010年講談社刊『<strong>大系 黒澤明（全4巻・別巻1）</strong>』を編・解説、黒澤自身の文字データを網羅的に集成した決定版となった。
+        その他の著書に『メディアの世紀』『極端に短いインターネットの歴史』（晶文社 1997——<em>eAT元年と同年刊行</em>）『デジタル革命の衝撃』『模倣される日本』『偽りの民主主義』『小津安二郎』（岩波新書 1993）など。アラン・ケイ『マルチメディア 21世紀のテクノロジー』（岩波書店 1993）の翻訳・監修も担当。<small style="color:var(--muted);">※『小津安二郎』は高橋治・佐藤忠男らの先行研究と酷似するとの指摘を受け短期で絶版となったが、浜野自身は「同じ資料を使っただけ」と弁明した経緯がある（Wikipedia）。</small>
+        <strong style="color:var(--red)">2014年1月3日午後0時10分、脳梗塞のため東京都新宿区の病院で逝去（享年62・歿日付で従四位・瑞宝小綬章受章）</strong>。告別式は東京都文京区小石川の伝通院にて同年1/12午前11時執行、喪主は妻・けい子さん（日経・朝日・毎日・読売 2014.1.5）。その3週間後に開催された第18回eAT（2014年1月24日）は、浜野を失った後の最初の会となった。
         山出保前市長がeATを立ち上げる際に全幅の信頼を置いた人物であり、彼の人脈と理念なしに30年のeATの歴史は始まらなかった。山出は浜野に幾度も「先生、後は育ってますか？」と尋ね、浜野は「しっかり育ってますよ」と答えたという（reallocal 2017後編）。この短い対話が、eATの設計思想——<strong>「イベントの成否より、人が育っているか」</strong>——の要約となっている。
       </p>
 
@@ -2317,6 +2418,7 @@
       <li><span class="year-tag">2016</span><a href="https://prtimes.jp/main/html/rd/p/000000005.000014654.html" target="_blank">PR TIMES「eAT2016 in KANAZAWA 開催決定」</a></li>
       <li><span class="year-tag">2016</span><a href="https://www.advertimes.com/20160205/article216987/" target="_blank">AdverTimes「eAT 2016 in KANAZAWA 大賞は菅野薫氏」</a></li>
       <li><span class="year-tag">2022</span><a href="https://www.mirai-nomachi.jp/event/341" target="_blank">金沢未来のまち創造館「EAT KANAZAWA 2022 開催」全4セッション・全登壇者掲載</a></li>
+      <li><span class="year-tag">2023</span><a href="https://www.mirai-nomachi.jp/event/943" target="_blank">金沢未来のまち創造館「【参加者募集】EAT KANAZAWA 2023『捨てる、繋ぐ、創る』」<strong>全3セッション・17名登壇者・3/25 金沢市文化ホール・孫泰蔵『冒険の書』直結テーマ</strong></a></li>
       <li><span class="year-tag">2024</span><a href="https://www.mirai-nomachi.jp/event/1516" target="_blank">金沢未来のまち創造館「EAT KANAZAWA 2024」全3セッション・時刻付き／<strong>「2020年よりEAT=食文化の意を取り入れアップデート」公式明言</strong></a></li>
       <li><span class="year-tag">2025</span><a href="https://www.isico.or.jp/event/dgnet/d31185115.html" target="_blank">ISICO DGnet「EAT KANAZAWA 2025」完全ゲストリスト＋「今年で28回目」明記</a></li>
       <li><span class="year-tag">2025</span><a href="https://www.mirai-nomachi.jp/event/1893" target="_blank">金沢未来のまち創造館「EAT KANAZAWA 2025 参加者募集」</a></li>
