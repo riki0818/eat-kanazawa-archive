@@ -19,13 +19,13 @@
     --muted: #6b6558;
   }
   *{box-sizing:border-box; margin:0; padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust: 100%}
   body{
     font-family: 'Shippori Mincho B1', serif;
     background: var(--paper);
     color: var(--ink);
-    line-height: 1.75;
-    font-size: 16px;
+    line-height: 1.8;
+    font-size: 15px;
     background-image:
       radial-gradient(circle at 20% 20%, rgba(143,118,54,0.05) 0%, transparent 50%),
       radial-gradient(circle at 80% 80%, rgba(184,53,47,0.04) 0%, transparent 50%);
@@ -508,7 +508,7 @@
     margin: 0 16px;
   }
 
-  /* RESPONSIVE */
+  /* RESPONSIVE — tablet */
   @media (max-width: 900px){
     .container{padding: 0 24px}
     .section-head{grid-template-columns: 1fr; gap: 12px}
@@ -519,6 +519,7 @@
     .people-grid{grid-template-columns: repeat(2, 1fr)}
     .masthead-stats{grid-template-columns: repeat(2, 1fr)}
     .stat:nth-child(2){border-right: none}
+    .editions{margin-left: 0 !important}
   }
 
   /* subtle entrance */
@@ -558,67 +559,71 @@
     letter-spacing: 0.1em;
     text-align: center;
     line-height: 1.1;
+  }
+
   /* =================================================
      RESPONSIVE / MOBILE
      ================================================= */
   @media (max-width: 768px){
     body{ font-size: 15px; line-height: 1.75; }
-    body::before{ opacity: 0.2; }
+    body::before{ opacity: 0.15; }
 
-    .container{ padding: 0 18px; }
+    .container{ padding: 0 16px; }
 
     /* Masthead */
-    .masthead{ padding: 32px 0 28px; }
+    .masthead{ padding: 28px 0 24px; }
     .masthead h1{
-      font-size: 48px !important;
+      font-size: 42px !important;
       line-height: 1 !important;
       letter-spacing: -0.02em !important;
     }
     .masthead h1 .sub-char{
-      font-size: 13px !important;
+      font-size: 12px !important;
       margin-top: 10px !important;
+      letter-spacing: 0.15em !important;
     }
     .masthead-meta{
       flex-direction: column;
       gap: 4px;
-      font-size: 10px;
+      font-size: 9px;
     }
     .masthead-dek{
       font-size: 14px !important;
       line-height: 1.85 !important;
-      margin-top: 20px !important;
+      margin-top: 18px !important;
     }
     .stamp{
-      width: 64px !important;
-      height: 64px !important;
-      top: 20px !important;
-      right: 18px !important;
+      width: 56px !important;
+      height: 56px !important;
+      top: 16px !important;
+      right: 16px !important;
     }
-    .stamp span{ font-size: 10px !important; }
+    .stamp span{ font-size: 9px !important; }
 
     /* Masthead 統計 - 2列に */
     .masthead-stats{
       grid-template-columns: 1fr 1fr !important;
-      gap: 16px !important;
-      margin-top: 28px !important;
+      gap: 0 !important;
+      margin-top: 24px !important;
     }
-    .masthead-stats .stat-num{ font-size: 32px !important; }
-    .masthead-stats .stat-label{ font-size: 10px !important; }
+    .stat{ padding: 16px 12px !important; }
+    .stat-num{ font-size: 28px !important; }
+    .stat-label{ font-size: 8px !important; letter-spacing: 0.1em !important; }
 
     /* 30周年リードセクション */
     #anniversary-lead{
-      padding: 28px 20px !important;
-      margin: 24px 0 40px !important;
+      padding: 20px 16px !important;
+      margin: 20px 0 32px !important;
     }
     #anniversary-lead h2{
-      font-size: 22px !important;
+      font-size: 20px !important;
       line-height: 1.45 !important;
     }
     #anniversary-lead > div[style*="grid-template-columns"]{
       grid-template-columns: 1fr !important;
-      gap: 24px !important;
+      gap: 20px !important;
     }
-    #anniversary-lead p{ font-size: 13px !important; }
+    #anniversary-lead p{ font-size: 13px !important; line-height: 1.8 !important; }
     #anniversary-lead div[style*="border-top"]{
       flex-direction: column !important;
       gap: 10px !important;
@@ -626,137 +631,185 @@
     }
 
     /* Section heads */
+    section{ padding: 48px 0 24px !important; }
     .section-head{
       flex-direction: column;
       gap: 8px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
-    .section-num{ font-size: 56px !important; }
-    .section-title{ font-size: 24px !important; }
-    .section-title .en{ font-size: 11px !important; }
+    .section-num{ font-size: 48px !important; }
+    .section-title{ font-size: 22px !important; }
+    .section-title .en{ font-size: 10px !important; letter-spacing: 0.15em !important; }
 
     /* Prose */
-    .prose{ font-size: 14px; }
-    .prose p{ font-size: 14px; }
-    blockquote{
+    .prose{ font-size: 14px; margin-left: 0 !important; }
+    .prose p{ font-size: 14px !important; line-height: 1.8 !important; }
+    .prose blockquote{
       font-size: 14px !important;
-      padding: 16px 18px !important;
-      margin: 20px 0 !important;
+      padding: 14px 16px !important;
+      margin: 16px 0 !important;
     }
+    .prose blockquote cite{ font-size: 11px !important; }
 
     /* Callouts */
     .callouts{
       grid-template-columns: 1fr !important;
-      gap: 16px !important;
+      gap: 12px !important;
     }
-    .callout{ padding: 18px !important; }
+    .callout{
+      padding: 16px !important;
+    }
+    .callout h5{ font-size: 16px !important; }
+    .callout p{ font-size: 13px !important; line-height: 1.75 !important; }
 
     /* Eras */
     .era{
-      padding: 20px 0 !important;
+      padding: 16px 0 !important;
+      margin-bottom: 32px !important;
       display: block !important;
     }
     .era-label{
       display: inline-block !important;
-      margin-bottom: 10px !important;
+      margin-bottom: 8px !important;
+      font-size: 10px !important;
     }
     .era-years{
       display: block !important;
-      font-size: 12px !important;
-      margin-bottom: 10px !important;
+      font-size: 11px !important;
+      margin-bottom: 8px !important;
+      margin-left: 0 !important;
+      line-height: 1.5 !important;
     }
-    .era-desc{ font-size: 14px !important; }
+    .era-desc{ font-size: 13px !important; line-height: 1.8 !important; }
 
-    /* ===== EDITIONS (メイン: 1列カード型に再構成) ===== */
+    /* ===== EDITIONS ===== */
     .editions{ margin-left: 0 !important; }
     .edition{
       grid-template-columns: 1fr !important;
-      gap: 14px !important;
-      padding: 24px 0 !important;
+      gap: 12px !important;
+      padding: 20px 0 !important;
     }
     .edition-no{
       flex-direction: row !important;
       flex-wrap: wrap !important;
       align-items: baseline !important;
-      gap: 12px !important;
-      padding-bottom: 12px;
+      gap: 10px !important;
+      padding-bottom: 10px;
       border-bottom: 1px solid rgba(26,24,20,0.1);
     }
     .edition-no .nth-big{
-      font-size: 38px !important;
+      font-size: 34px !important;
       padding-bottom: 0 !important;
       margin-bottom: 0 !important;
       border-bottom: none !important;
     }
     .edition-no .year{
-      font-size: 13px !important;
+      font-size: 12px !important;
       margin-bottom: 0 !important;
     }
     .edition-no .fy{
-      font-size: 10px !important;
+      font-size: 9px !important;
       margin-bottom: 0 !important;
     }
-    .edition-no .era{ font-size: 10px !important; }
+    .edition-no .era{ font-size: 9px !important; }
 
     /* 休止エントリ */
-    .edition-no--hiatus .nth-big--hiatus{ font-size: 22px !important; }
+    .edition-no--hiatus .nth-big--hiatus{ font-size: 20px !important; }
 
     /* 30周年エントリ */
-    .edition-no--anniv .nth-big--anniv{
-      font-size: 42px !important;
-    }
-    .edition-no--anniv .anniv-badge{
-      font-size: 10px !important;
-    }
+    .edition-no--anniv .nth-big--anniv{ font-size: 38px !important; }
+    .edition-no--anniv .anniv-badge{ font-size: 9px !important; }
 
-    .edition-body h4{ font-size: 16px !important; }
-    .edition-body .theme{ font-size: 14px !important; }
-    .edition-body p{ font-size: 13px !important; }
+    .edition-body h4{ font-size: 15px !important; }
+    .edition-body .theme{ font-size: 13px !important; }
+    .edition-body p{ font-size: 13px !important; line-height: 1.75 !important; }
 
-    /* Edition side（会場情報など）をフラットに */
+    /* Edition side — compact card */
     .edition-side{
       display: flex !important;
       flex-direction: column !important;
-      gap: 6px !important;
-      padding: 12px 14px !important;
+      gap: 4px !important;
+      padding: 10px 12px !important;
       background: rgba(184,53,47,0.04) !important;
       border-left: 3px solid var(--red) !important;
-      margin-top: 8px !important;
+      margin-top: 4px !important;
+      border-top: none !important;
     }
     .edition-side .field{
-      font-size: 11px !important;
+      font-size: 10px !important;
       display: flex !important;
-      gap: 8px !important;
+      gap: 6px !important;
     }
 
     /* People grid */
     .people-grid{
       grid-template-columns: 1fr !important;
-      gap: 12px !important;
+      gap: 1px !important;
     }
+    .person{ padding: 14px 16px !important; }
+    .person .name{ font-size: 14px !important; }
 
-    /* Sources list */
+    /* Pull quote */
+    .pullquote{ margin: 40px 0 !important; padding: 28px 0 !important; }
+    .pullquote q{ font-size: 18px !important; line-height: 1.6 !important; }
+    .pullquote cite{ font-size: 10px !important; }
+
+    /* Sources */
+    .sources{ padding: 40px 0 !important; }
+    .sources-list{
+      margin-left: 0 !important;
+      font-size: 11px !important;
+    }
     .sources-list li{
-      font-size: 12px !important;
-      padding: 8px 0 !important;
+      padding: 6px 0 !important;
+      line-height: 1.8 !important;
+    }
+    .sources-list li .year-tag{
+      width: 36px !important;
+      margin-right: 8px !important;
+      font-size: 9px !important;
     }
 
     /* Colophon */
     .colophon{
       flex-direction: column !important;
       gap: 8px !important;
-      font-size: 11px !important;
-      padding: 32px 0 !important;
+      font-size: 9px !important;
+      padding: 28px 0 !important;
     }
     .colophon .divider{ display: none !important; }
+
+    /* Inline style overrides for mobile */
+    div[style*="grid-template-columns: 1fr 1fr"]{
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+    div[style*="padding: 36px 40px"]{
+      padding: 20px 16px !important;
+    }
+    div[style*="padding: 24px; background: #fff"]{
+      padding: 16px !important;
+    }
+    h3[style*="font-size: 26px"]{
+      font-size: 19px !important;
+    }
+    p[style*="font-size:15px"]{
+      font-size: 13px !important;
+    }
+    div[style*="display: flex; gap: 32px"]{
+      flex-direction: column !important;
+      gap: 10px !important;
+    }
   }
 
   /* 小さめスマホ */
   @media (max-width: 380px){
-    .masthead h1{ font-size: 40px !important; }
-    .edition-no .nth-big{ font-size: 32px !important; }
-    .section-num{ font-size: 44px !important; }
-    .section-title{ font-size: 20px !important; }
+    .container{ padding: 0 12px; }
+    .masthead h1{ font-size: 36px !important; }
+    .edition-no .nth-big{ font-size: 28px !important; }
+    .section-num{ font-size: 40px !important; }
+    .section-title{ font-size: 18px !important; }
+    .stat-num{ font-size: 24px !important; }
   }
 </style>
 </head>
@@ -793,8 +846,8 @@
         <div class="stat-label">Editions held (FY2018 休止)</div>
       </div>
       <div class="stat">
-        <div class="stat-num">525<span class="unit">名</span></div>
-        <div class="stat-label">Max Attendees (FY2015)</div>
+        <div class="stat-num">≈9,000<span class="unit">名</span></div>
+        <div class="stat-label">延べ参加者（推定）/ 29 Editions</div>
       </div>
       <div class="stat">
         <div class="stat-num">2<span class="unit">名</span></div>
