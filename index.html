@@ -231,7 +231,7 @@
   }
   .edition{
     display: grid;
-    grid-template-columns: 150px 1fr 240px;
+    grid-template-columns: 150px 1fr;
     gap: 24px;
     padding: 32px 0;
     border-bottom: 1px solid rgba(26,24,20,0.15);
@@ -336,18 +336,24 @@
     margin-bottom: 10px;
   }
   .edition-body p:last-child{ margin-bottom: 0; }
-  .edition-side{
+  .edition-meta{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
-    line-height: 1.7;
+    line-height: 1.5;
     color: var(--muted);
     letter-spacing: 0.05em;
+    margin: 8px 0 14px;
+    padding: 8px 12px;
+    background: rgba(26,24,20,0.03);
+    border-left: 2px solid var(--red);
   }
-  .edition-side .field{margin-bottom: 4px}
-  .edition-side .field .k{
-    display: inline-block;
-    width: 60px;
+  .edition-meta .field{white-space: nowrap}
+  .edition-meta .field .k{
     color: var(--red);
+    margin-right: 4px;
   }
 
   /* ============ CALLOUT CARDS ============ */
@@ -514,7 +520,7 @@
     .section-head{grid-template-columns: 1fr; gap: 12px}
     .prose, .sources-list{margin-left: 0}
     .edition{grid-template-columns: 1fr; gap: 12px}
-    .edition-side{padding-top: 8px; border-top: 1px dashed var(--muted)}
+    .edition-meta{margin: 6px 0 10px}
     .callouts{grid-template-columns: 1fr}
     .people-grid{grid-template-columns: repeat(2, 1fr)}
     .masthead-stats{grid-template-columns: repeat(2, 1fr)}
@@ -716,20 +722,12 @@
     .edition-body .theme{ font-size: 14px !important; }
     .edition-body p{ font-size: 13px !important; }
 
-    /* Edition side（会場情報など）をフラットに */
-    .edition-side{
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 6px !important;
-      padding: 12px 14px !important;
-      background: rgba(184,53,47,0.04) !important;
-      border-left: 3px solid var(--red) !important;
-      margin-top: 8px !important;
-    }
-    .edition-side .field{
-      font-size: 11px !important;
-      display: flex !important;
-      gap: 8px !important;
+    /* Edition meta（タイトル下メタ情報） */
+    .edition-meta{
+      gap: 4px 12px !important;
+      font-size: 10px !important;
+      padding: 6px 10px !important;
+      margin: 6px 0 10px !important;
     }
 
     /* People grid */
@@ -1121,6 +1119,7 @@
         <div class="edition-body">
           <h4>総合P：江並直美（アートディレクター／デジタローグ代表）</h4>
           <p class="theme">金沢市主催によるエレクトリックアート・クリエイターの祭典、始動</p>
+          <div class="edition-meta"><span class="field"><span class="k">主催</span>金沢市</span><span class="field"><span class="k">体制</span>浜野保樹 委員長</span><span class="field"><span class="k">背景</span>デジタローグ／YELLOWS</span></div>
           <p><strong>eAT 1997 — 金沢市主催によるエレクトリックアート・クリエイターの祭典として開幕。</strong>山出保市長の文化政策と、浜野保樹（東京大学大学院／実行委員長）の人脈設計によって始動。</p>
           <p style="font-size:14px; margin-top:10px;">
             初代プロデューサー <strong>江並直美</strong>（1956年大阪生まれ）は、1990年代日本のマルチメディア／電子出版黎明期の中心人物。
@@ -1136,7 +1135,6 @@
             1998年「京の庭」で <strong>ニューヨークADC賞New Media部門銀賞</strong>、2000年『マンダラ・コスモロジー』で <strong>AMD Award "Best Visual Designer賞"</strong> 受賞。2002年 AMD Award <strong>「功労賞」</strong>受賞、2005年より同アワードに新人賞として <strong>「江並直美賞」</strong> が創設された（江並自身が後進を育てる制度を作った）。2012年 <strong>第16回文化庁メディア芸術祭功労賞</strong> 受賞。これはeATの「名人賞→総合P」循環と同じ設計思想——<em>育てた人が次世代を育てる</em>——が、江並のキャリアにも貫かれていたことを示す。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">主催</span>金沢市</span><span class="field"><span class="k">体制</span>浜野保樹 委員長</span><span class="field"><span class="k">背景</span>デジタローグ／YELLOWS</span></div>
       </div>
 
       <div class="edition">
@@ -1144,6 +1142,7 @@
         <div class="edition-body">
           <h4>総合P：萩野正昭（株式会社ボイジャー 代表取締役）</h4>
           <p class="theme">テーマ軸：電子出版と「本の未来」 —— エキスパンドブックの時代</p>
+          <div class="edition-meta"><span class="field"><span class="k">主催</span>金沢市</span><span class="field"><span class="k">テーマ</span>電子出版／本の未来</span><span class="field"><span class="k">背景</span>エキスパンドブック</span></div>
           <p><strong>テーマ軸：電子出版と「本の未来」</strong> —— eATが黎明期から「新しいメディア」の議論を核に据えていた証左の回。</p>
           <p style="font-size:14px; margin-top:10px;">
             萩野正昭（1946年東京生まれ）は1970年東映教育映画、1981年パイオニアLDCでレーザーディスクのインタラクティブ制作、1990年パイオニアLDC取締役映画製作部長を経て、
@@ -1157,7 +1156,6 @@
             1998年はMacworld Expoでボイジャーブースから<strong>浜野保樹著『本の未来』</strong>が販売された年でもあり、第2回eATは「電子書籍というメディアの可能性」そのものをテーマにしたと推測される。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">主催</span>金沢市</span><span class="field"><span class="k">テーマ</span>電子出版／本の未来</span><span class="field"><span class="k">背景</span>エキスパンドブック</span></div>
       </div>
 
       <div class="edition">
@@ -1165,6 +1163,7 @@
         <div class="edition-body">
           <h4>総合P：山口裕美（アートプロデューサー）</h4>
           <p class="theme">★ 名人賞制度 発足 — 第1回受賞：樋口真嗣（特殊映像演出家）</p>
+          <div class="edition-meta"><span class="field"><span class="k">制度</span>名人賞 start</span><span class="field"><span class="k">名人</span>樋口真嗣</span><span class="field"><span class="k">海外</span>Benjamin Weil (ICA London)</span><span class="field"><span class="k">意義</span>「eAT」表記確定</span></div>
           <p>この年から「名人賞」が発足。第1回受賞者は特殊映像演出者の<strong>樋口真嗣</strong>。『ガメラ』三部作（1995-1999）等の90年代後半の活躍が評価された（本人が2013年eAT登壇時に回想）。</p>
           <p style="margin-top:10px"><strong>★ 海外ゲスト：Benjamin Weil（ベンジャミン・ワイル）</strong></p>
           <p style="font-size:14px;">
@@ -1181,7 +1180,6 @@
             山口裕美は1999年時点で新進のアートプロデューサー。ここから2020年の第23回まで、20年以上にわたってEATの継続的参加者となる。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">制度</span>名人賞 start</span><span class="field"><span class="k">名人</span>樋口真嗣</span><span class="field"><span class="k">海外</span>Benjamin Weil (ICA London)</span><span class="field"><span class="k">意義</span>「eAT」表記確定</span></div>
       </div>
 
       <div class="edition">
@@ -1189,6 +1187,7 @@
         <div class="edition-body">
           <h4>総合P：掛須秀一（編集技師／ジェイフィルム代表）</h4>
           <p class="theme">★ 名人賞：中島信也（東北新社 専務取締役）</p>
+          <div class="edition-meta"><span class="field"><span class="k">名人</span>中島信也</span><span class="field"><span class="k">背景</span>ノンリニア編集の先駆</span></div>
           <p style="font-size:14px;">
             <strong>掛須秀一</strong>（1957年千葉県勝浦市生まれ）は映画業界の編集技師。横浜放送映画専門学院（現・日本映画大学）第一期卒業。葦プロダクションから独立した辺見俊夫と共にジェイフィルム設立。
             <strong>1994年、映画業界としては初めてコンピュータを使った「ノンリニア編集」に着手</strong>、
@@ -1201,7 +1200,6 @@
             <em>eATにおける「名人賞 → 総合P → 実行委員長」という昇格導線の最初期の顕在化</em>。
           </p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">名人</span>中島信也</span><span class="field"><span class="k">背景</span>ノンリニア編集の先駆</span></div>
       </div>
 
       <div class="edition">
@@ -1209,6 +1207,7 @@
         <div class="edition-body">
           <h4>総合P：タナカノリユキ（アーティスト／アートディレクター）</h4>
           <p class="theme">★ 名人賞：糸井重里（コピーライター）</p>
+          <div class="edition-meta"><span class="field"><span class="k">名人</span>糸井重里</span><span class="field"><span class="k">背景</span>タナカ=ユニクロCDの初期</span><span class="field"><span class="k">起点</span>宮田人司 初参加</span></div>
           <p style="font-size:14px;">
             <strong>タナカノリユキ</strong>（1959年東京生まれ、東京藝大大学院修了）が総合Pを務めたこの回は、
             <strong>1999年から始まったタナカのユニクロ クリエイティブディレクター就任直後</strong>、
@@ -1221,7 +1220,6 @@
             その後、宮田は毎年ゲスト→第7回（2003）から実行委員→第9回（2005）総合P→2010年家族で金沢移住→モデレーター三人衆へとキャリアを重ねていく。<strong>この一本の電話が、その後20年の金沢クリエイティブ産業を規定したことになる</strong>。
           </p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">名人</span>糸井重里</span><span class="field"><span class="k">背景</span>タナカ=ユニクロCDの初期</span><span class="field"><span class="k">起点</span>宮田人司 初参加</span></div>
       </div>
 
       <div class="edition">
@@ -1229,6 +1227,7 @@
         <div class="edition-body">
           <h4>総合P：小野寺浩幸（ミュージシャン）／ 池田洋一郎（オトショップ）</h4>
           <p class="theme">★ 名人賞：Max V. Mathews（スタンフォード大学教授）</p>
+          <div class="edition-meta"><span class="field"><span class="k">名人</span>Max V. Mathews</span><span class="field"><span class="k">領域</span>コンピュータ音楽</span><span class="field"><span class="k">招聘</span>Stanford CCRMA</span></div>
           <p style="font-size:14px; margin-top:10px;">
             名人賞＝<strong>Max V. Mathews</strong>（1926-2011）。「<strong>コンピュータ音楽の父</strong>」と呼ばれる米国の研究者。
             MITで1954年博士号取得後、ベル研究所へ。1957年<strong>世界初のコンピュータ音楽プログラム「MUSIC I」を開発</strong>、1961年に『Daisy Bell』をIBM 7094に歌唱させた有名なデモは『2001年宇宙の旅』のHAL 9000の歌唱シーンの元ネタとなった。
@@ -1239,7 +1238,6 @@
             2002年は日本ではiモード絶頂期で宮田人司が着メロ世界初配信で話題、一方eATでは「コンピュータ音楽史の始祖」を呼ぶという、デジタル音楽の起点を問う構成だった。
           </p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">名人</span>Max V. Mathews</span><span class="field"><span class="k">領域</span>コンピュータ音楽</span><span class="field"><span class="k">招聘</span>Stanford CCRMA</span></div>
       </div>
 
       <div class="edition">
@@ -1247,6 +1245,7 @@
         <div class="edition-body">
           <h4>総合P：河口洋一郎（CGアーティスト／東京大学大学院情報学環・学際情報学府 教授）</h4>
           <p class="theme">テーマ：アートはサバイバルだ!</p>
+          <div class="edition-meta"><span class="field"><span class="k">名人</span>井上雄彦</span><span class="field"><span class="k">背景</span>GROWTH Model / Venice Biennale 1995</span><span class="field"><span class="k">思想</span>生物のサバイバル</span></div>
           <p>★ 名人賞：<strong>井上雄彦</strong>（漫画家）</p>
           <p style="font-size:14px; margin-top:10px;">
             <strong>河口洋一郎</strong>（1952年鹿児島県種子島生まれ）は日本CGアートの祖。
@@ -1263,7 +1262,6 @@
             名人賞＝<strong>井上雄彦</strong>。『SLAM DUNK』完結後『バガボンド』連載中（2003年は第8巻発売年）。「水墨画の到達点としての漫画」を追求していた時期。
           </p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">名人</span>井上雄彦</span><span class="field"><span class="k">背景</span>GROWTH Model / Venice Biennale 1995</span><span class="field"><span class="k">思想</span>生物のサバイバル</span></div>
       </div>
 
       <div class="edition">
@@ -1271,6 +1269,7 @@
         <div class="edition-body">
           <h4>総合P：中島信也（東北新社 CMディレクター、補：中島浩二郎）</h4>
           <p class="theme">★ 名人賞：宮本茂（任天堂 専務取締役 情報開発本部長）</p>
+          <div class="edition-meta"><span class="field"><span class="k">名人</span>宮本茂</span><span class="field"><span class="k">総合P</span>中島信也（後の委員長）</span><span class="field"><span class="k">意義</span>ゲーム = アート</span></div>
           <p style="font-size:14px; margin-top:10px;">
             総合P＝<strong>中島信也</strong>（2000年名人賞受賞からの昇格、後の第2代実行委員長）。代表作に日清カップヌードル「Hungry?」（1992カンヌグランプリ）、サントリー「BOSS宇宙人ジョーンズ」シリーズなど、日本の広告史を代表するCMディレクター。
           </p>
@@ -1286,7 +1285,6 @@
             <strong style="color:var(--gold)">時期の並行性</strong>：このFY2003（第8回）の数ヶ月後、<strong>2004年10月9日に金沢21世紀美術館（設計：妹島和世＋西沢立衛／SANAA）が開館</strong>。1999年3月SANAA選定、2002年4月起工、2004年8月竣工——<em>つまり第8回eATは、金沢21世紀美術館の工事が最終局面に入っていた時期に開催</em>された。山出保市長は設計時、SANAAに「普段着でも入れる美術館」をオーダー。eATの「気軽にクリエイターと飲み食いする夜塾文化」と、21美の「気軽に入れる美術館」哲学は、同じ市長が同じ時期に設計した2つの装置である。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">名人</span>宮本茂</span><span class="field"><span class="k">総合P</span>中島信也（後の委員長）</span><span class="field"><span class="k">意義</span>ゲーム = アート</span></div>
       </div>
 
       <div class="edition">
@@ -1294,6 +1292,7 @@
         <div class="edition-body">
           <h4>総合P：宮田人司（補：松本清一）</h4>
           <p class="theme">テーマ：かっこいい!!がビジネス</p>
+          <div class="edition-meta"><span class="field"><span class="k">名人</span>押井守</span><span class="field"><span class="k">宮田</span>着メロ世界初 → eAT P</span><span class="field"><span class="k">象徴</span>ビジネス概念の導入</span></div>
           <p><strong>eAT史上はじめて「ビジネス」概念を正面から導入した回。</strong></p>
           <p style="font-size:14px; margin-top:10px;">
             <strong>宮田人司</strong>（1968年タイ・バンコク生まれ）は、第5回（2001）初参加以来毎年のゲスト→第7回から実行委員→この第9回（2005）で総合P昇格。
@@ -1312,7 +1311,6 @@
             <strong style="color:var(--gold)">時代的意義</strong>：第9回（2005年開催、FY2004）は<strong>金沢21世紀美術館の開館（2004年10月9日）後初のeAT</strong>。21美は<strong>開館初年度で来館者157万人</strong>を記録（当初目標の30万人を5倍以上上回る）し、金沢を「現代アートを見に行く都市」として世界に発信した年だった。21美が空間で「コンテンポラリーアートの金沢」を体現し、eATは人と対話で「デジタル×食を含むクリエイターの金沢」を体現する——2つの装置が2004年度を境に並行稼働を始めた。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">名人</span>押井守</span><span class="field"><span class="k">宮田</span>着メロ世界初 → eAT P</span><span class="field"><span class="k">象徴</span>ビジネス概念の導入</span></div>
       </div>
 
       <div class="edition">
@@ -1320,6 +1318,7 @@
         <div class="edition-body">
           <h4>総合P：佐藤卓（アートディレクター／TSDO）／ 初代委員長・浜野保樹 最終年度</h4>
           <p class="theme">★ 名人賞：明和電機（アートユニット）</p>
+          <div class="edition-meta"><span class="field"><span class="k">名人</span>明和電機</span><span class="field"><span class="k">体制</span>浜野委員長 最終年</span><span class="field"><span class="k">節目</span>第10回 総括</span></div>
           <p style="font-size:14px; margin-top:10px;">
             <strong>佐藤卓</strong>（1955年東京生まれ、東京藝大大学院）は日本を代表するグラフィック／プロダクト・アートディレクター。
             ロッテ「キシリトールガム」、明治「おいしい牛乳」、NHKEテレ『デザインあ』総合指導など。2007年には<strong>21_21 DESIGN SIGHT</strong>（六本木）を三宅一生らと共同ディレクション。10回記念の総合P。
@@ -1334,7 +1333,6 @@
             また同年12月には「EAT OPEN COLLEGE 2006 〜プロデューサー塾」がITビジネスプラザ武蔵（金沢）で別途開催される等、通年事業として展開した時期でもある。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">名人</span>明和電機</span><span class="field"><span class="k">体制</span>浜野委員長 最終年</span><span class="field"><span class="k">節目</span>第10回 総括</span></div>
       </div>
 
       <!-- Era 2 -->
@@ -1343,6 +1341,7 @@
         <div class="edition-body">
           <h4>総合P：明和電機（土佐信道） ／ 中島信也実行委員長 就任初年度</h4>
           <p class="theme">テーマ：ロマンスエンジニアリング</p>
+          <div class="edition-meta"><span class="field"><span class="k">体制</span>中島委員長 start</span><span class="field"><span class="k">名人</span>佐藤卓</span><span class="field"><span class="k">象徴</span>デジタルロマンチカ ライブ</span></div>
           <p style="font-size:14px; margin-top:10px;">
             テーマ「ロマンスエンジニアリング」は、明和電機が<strong>2002年8〜10月にパルコ東京・名古屋で開催した展覧会「ROMANCE*ENGINEERING展」</strong>をそのまま持ち込んだもの。明和電機の「ナキシリーズ」「ツクバシリーズ」「エーデルワイスシリーズ」など、技術的エンジニアリングに「情念」を溶かし込んだ作品群の総称。
           </p>
@@ -1358,7 +1357,6 @@
             <strong>中島信也（東北新社）の実行委員長時代の始まり</strong>。浜野保樹（学術／東大）から中島信也（広告／CM）へと、eATの求心力の質も転換していく。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">体制</span>中島委員長 start</span><span class="field"><span class="k">名人</span>佐藤卓</span><span class="field"><span class="k">象徴</span>デジタルロマンチカ ライブ</span></div>
       </div>
 
       <div class="edition">
@@ -1366,6 +1364,7 @@
         <div class="edition-body">
           <h4>総合P：しりあがり寿（漫画家）</h4>
           <p class="theme">★ 名人賞：原恵一（アニメーション監督）</p>
+          <div class="edition-meta"><span class="field"><span class="k">名人</span>原恵一</span><span class="field"><span class="k">系譜</span>次回 石川光久 / I.G へ</span></div>
           <p style="font-size:14px; margin-top:10px;">
             <strong>しりあがり寿</strong>（1958年静岡県生まれ、多摩美）は代表作に朝日新聞夕刊連載『地球防衛家のヒトビト』、『ヒゲのOL藪内笹子』、『弥次喜多 in DEEP』ほか多数。
             社会時評からナンセンスギャグまで振幅の大きい作風で知られる。講談社『週刊ヤングマガジン』『モーニング』系列で長年活躍。
@@ -1380,7 +1379,6 @@
             漫画家（しりあがり）＋アニメ監督（原）という組み合わせは、「描画の奥にある思考」を語る回だったと推測される。翌第13回の石川光久（I.G）への系譜もここから見える。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">名人</span>原恵一</span><span class="field"><span class="k">系譜</span>次回 石川光久 / I.G へ</span></div>
       </div>
 
       <div class="edition">
@@ -1388,6 +1386,7 @@
         <div class="edition-body">
           <h4>総合P：石川光久（株式会社プロダクションI.G 代表取締役社長）</h4>
           <p class="theme">★ 名人賞：川井憲次（作曲家）</p>
+          <div class="edition-meta"><span class="field"><span class="k">名人</span>川井憲次</span><span class="field"><span class="k">系譜</span>川井 2年後にP昇格</span><span class="field"><span class="k">背景</span>Production I.G 攻殻</span></div>
           <p style="font-size:14px; margin-top:10px;">
             <strong>石川光久</strong>（1958年東京都生まれ）は1987年プロダクションI.G設立。
             押井守『攻殻機動隊』シリーズ（1995, 2004, 2017）、『人狼 JIN-ROH』（2000）、神山健治『攻殻機動隊 STAND ALONE COMPLEX』（2002-05）、『東のエデン』（2009、eAT登壇時の最新作）などで日本アニメ産業を国際的に展開した敏腕プロデューサー。
@@ -1402,7 +1401,6 @@
             この回は日本アニメ産業の「プロデュース＋音楽」という2本柱を正面から主題化した。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">名人</span>川井憲次</span><span class="field"><span class="k">系譜</span>川井 2年後にP昇格</span><span class="field"><span class="k">背景</span>Production I.G 攻殻</span></div>
       </div>
 
       <div class="edition">
@@ -1410,6 +1408,7 @@
         <div class="edition-body">
           <h4>総合P：森本千絵（コミュニケーションディレクター／goen°主宰）</h4>
           <p class="theme">テーマ：トキメキからだフェスティバル</p>
+          <div class="edition-meta"><span class="field"><span class="k">名人</span>リリー・フランキー</span><span class="field"><span class="k">表記</span>eA'T 10</span><span class="field"><span class="k">総合P</span>goen°森本千絵</span></div>
           <p>
             第14回（「eA'T 10」と表記）は、2007年に博報堂から独立してgoen°を設立したばかりの森本千絵による、「身体」を主題にした構成。
             森本のWikipedia経歴にも「<strong>eA'T10 KANAZAWA『トキメキからだフェスティバル』映像・企画（2009年）</strong>」として記載される、本人のキャリアの節目の仕事の一つ。
@@ -1421,7 +1420,6 @@
             2011年新潟県長岡市「アオーレ長岡」サイン計画・アートワーク。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">名人</span>リリー・フランキー</span><span class="field"><span class="k">表記</span>eA'T 10</span><span class="field"><span class="k">総合P</span>goen°森本千絵</span></div>
       </div>
 
       <div class="edition">
@@ -1429,6 +1427,7 @@
         <div class="edition-body">
           <h4>総合P：川井憲次（作曲家） ／ 2/4（金）〜2/6（日）3日間開催</h4>
           <p class="theme">テーマ：メイド・イン・ジャパン 〜金沢から発信するNIPPON〜</p>
+          <div class="edition-meta"><span class="field"><span class="k">名人</span>鄭秀和</span><span class="field"><span class="k">夜塾</span>湯涌温泉 旅館かなや 170名</span><span class="field"><span class="k">終了</span>アワード／ジュニア部門</span><span class="field"><span class="k">象徴</span>オタマトーン即興</span></div>
           <p>
             <strong>2/4（金）表彰式 ＠金沢市文化ホール</strong>：名人賞＝建築家／デザイナー<strong>鄭秀和</strong>（amanada）。
             一般／小中高生から募集した作品の優秀者表彰。
@@ -1455,7 +1454,6 @@
             <span style="color:var(--muted);">※ これらの付帯プログラムは後年、<strong>CVCK（クリエイティブ・ベンチャー・シティ・金沢）事業</strong>として独立展開されることになる（旧公式サイト記載）。</span>
           </div>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">名人</span>鄭秀和</span><span class="field"><span class="k">夜塾</span>湯涌温泉 旅館かなや 170名</span><span class="field"><span class="k">終了</span>アワード／ジュニア部門</span><span class="field"><span class="k">象徴</span>オタマトーン即興</span></div>
       </div>
 
       <div class="edition">
@@ -1463,6 +1461,7 @@
         <div class="edition-body">
           <h4>総合P：菱川勢一（クリエイティブディレクター／DRAWING AND MANUAL ファウンダー）</h4>
           <p class="theme">テーマ：センス・オブ・ワンダー 〜豊かなくらしってなんですか?〜（震災後）</p>
+          <div class="edition-meta"><span class="field"><span class="k">DAY1</span>金沢市文化ホール</span><span class="field"><span class="k">DAY2</span>金沢市民芸術村</span><span class="field"><span class="k">特展</span>駅もてなしドーム地下</span><span class="field"><span class="k">背景</span>森の木琴カンヌ三冠</span><span class="field"><span class="k">波及</span>DRAWING KANAZAWA開設</span></div>
           <p style="font-size:14px; margin-top:10px;">
             <strong>菱川勢一</strong>（1969年東京都生まれ）はCBSソニーグループ入社後に渡米、帰国後<strong>1996年にナガオカケンメイらと共にDRAWING AND MANUAL設立</strong>。
             1990年代から日本のモーショングラフィックスを牽引。1997年AXISで『モーショングラフィックス展'97』開催（動くロゴをテーマ、Apple/Adobe協賛、約8000人動員）は業界の転換点となった。
@@ -1481,7 +1480,6 @@
             第16回eATは、総合Pが金沢に継続的な拠点を構えるきっかけとなった画期でもある。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">DAY1</span>金沢市文化ホール</span><span class="field"><span class="k">DAY2</span>金沢市民芸術村</span><span class="field"><span class="k">特展</span>駅もてなしドーム地下</span><span class="field"><span class="k">背景</span>森の木琴カンヌ三冠</span><span class="field"><span class="k">波及</span>DRAWING KANAZAWA開設</span></div>
       </div>
 
       <div class="edition">
@@ -1489,6 +1487,7 @@
         <div class="edition-body">
           <h4>1/25（金）・26（土）／17回目</h4>
           <p class="theme">テーマ：B+ 常識を超えろ</p>
+          <div class="edition-meta"><span class="field"><span class="k">規模</span>6 セミナー</span><span class="field"><span class="k">招聘</span>TED経由石黒浩</span></div>
           <p>2日目午前「スペシャルセミナー・B＋デザイン」：<strong>鹿野護</strong>（WOW 取締役／仙台・東京・ロンドン拠点、被災者としての当事者性を軸に「無用の用。独創性で世界と向き合う」）。東日本大震災後、仙台の街に戻った鹿野が花屋の人だかりを見て「花なんか食べられないのに、なぜ売れているのか」と気付き、生活必需品の先にある「心の豊かさ、人間らしさを感じさせてくれるものの存在」をWOWの活動原理に据えた経緯を語った。<em>「自分たちの手が届かないところで、自分たちのやっている活動がどんな影響を与えているか」</em>を象徴するYouTube動画（WOWの映像作品をテレビで見ている少女が思わず「Wow!」と口にする映像）で締めくくった。</p>
           <p>2日目午後は6本並列のセミナー：<br>
           ・<strong>B+ロボティクス</strong>：石黒浩（大阪大学、TED登壇を実行委員が見て「ラブコール」で招聘）<br>
@@ -1503,7 +1502,6 @@
             「他者があっと驚くようなアイデアや、あまりにも大きな問題に挑むことばかりがクリエイティブではない。それを成し遂げる人達はもちろんいるが、たいていの場合、待っているのは中途半端な結果である。一つ一つの地道な問題解決や取り組みこそが大切であり、その積み重ねが我々の未来を作っていくことになる」——<strong>山出保前市長（2010退任）から山野之義市長（2010就任）への政治的バトンが明確に示された回</strong>。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">規模</span>6 セミナー</span><span class="field"><span class="k">招聘</span>TED経由石黒浩</span></div>
       </div>
 
       <div class="edition">
@@ -1511,6 +1509,7 @@
         <div class="edition-body">
           <h4>1/24 金沢市文化ホール大ホール ／ 実行委員長：中島信也</h4>
           <p class="theme">テーマ：おもしろい次世代</p>
+          <div class="edition-meta"><span class="field"><span class="k">会場</span>金沢市文化ホール大ホール</span><span class="field"><span class="k">開催日</span>1/24 (金)</span><span class="field"><span class="k">節目</span>浜野保樹 逝去後 初回</span></div>
           <div style="background: rgba(26,24,20,0.05); border-left: 3px solid var(--ink); padding: 14px 18px; margin: 12px 0; font-size:14px; line-height:1.85;">
             <div style="margin-bottom:8px;"><strong>この回の開催の3週間前、2014年1月3日、初代実行委員長・浜野保樹が逝去した（62歳）。</strong></div>
             <div>浜野は1951年兵庫県高砂市生まれ、国際基督教大学卒→ハーバード大学教育大学院教育工学センター客員研究員→新潟大学→メディア教育開発センター→東京大学（1999年〜）。デジタル・コンテンツ大賞審査委員長、朝日デジタル・エンターテイメント大賞審査委員長などを歴任、著書『メディアの世紀』『極端に短いインターネットの歴史』『デジタル革命の衝撃』などで知られた日本のメディア学の代表的論者。1997年の第1回から第10回（2006）まで実行委員長としてeATの「電子的前衛」の基盤を築いた人物の逝去は、eAT関係者に深い衝撃を与えた。<em>この第18回は、eATにとって浜野を失った後の最初の回</em>である。</div>
@@ -1525,7 +1524,6 @@
           <p style="color:var(--muted); font-size:13px"><em>※ 第18回の総合プロデューサーは Wikipedia 掲載リスト（第16回=菱川勢一まで）の後で未記載。中島信也が実行委員長として自らキュレーションに深く関与したと推測される。
           「おもしろい次世代」というテーマは、浜野が築いた「一流の最先端」とは対照的に、<strong>インターネット時代の匿名クリエイター／無名の才能</strong>に焦点を当てた構成となっている。</em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">会場</span>金沢市文化ホール大ホール</span><span class="field"><span class="k">開催日</span>1/24 (金)</span><span class="field"><span class="k">節目</span>浜野保樹 逝去後 初回</span></div>
       </div>
 
       <div class="edition">
@@ -1533,6 +1531,7 @@
         <div class="edition-body">
           <h4>公営「最終回」 ／ 1/30・31 金沢市文化ホール</h4>
           <p class="theme">テーマ：eAT金沢は終わるのか!? ／ 副題「クリエーティブ・テクノロジストの考えるコミュニケーション」</p>
+          <div class="edition-meta"><span class="field"><span class="k">主催</span>イート金沢実行委員会</span><span class="field"><span class="k">事務局</span>金沢市経済局ものづくり産業支援課</span><span class="field"><span class="k">価格</span>DAY1無料／DAY2 2,000円</span></div>
           <p><strong>初日（スペシャルセミナー）</strong>：菅野薫（電通クリエーティブ・テクノロジスト）「『Art, Copy &amp; Code』—— 新しいイノベーションは〈技術〉ではなく〈技術の使い方〉にある」。ホンダ・インターナビ走行データを光の粒として可視化した事例を披露。</p>
           <p><strong>2日目セッション「ジェネレーション 〜 eATが発掘する新しい才能」</strong>（モデレーター：土佐信道／明和電機）：
           ・髙橋征資（バイバイワールド／よしもとロボット研究所チーフクリエイター、「音手（おんず）」拍手マシン、Pepper開発担当）
@@ -1541,7 +1540,6 @@
           土佐：「なんとなく一人遊びが上手な人たち」。3人とも「未来は暗いか？」の問いに即答「暗い」——「しかしそれは絶望ではなく、光を見つけていく作業が自分たちのライフワーク」。</p>
           <p>ほかディスカッション参加：川井憲次（大河「花燃ゆ」音楽）、林信行、外村仁（Evernote日本法人会長）、加藤拓、秋山具義。夜塾：金沢ニューグランドホテル。</p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">主催</span>イート金沢実行委員会</span><span class="field"><span class="k">事務局</span>金沢市経済局ものづくり産業支援課</span><span class="field"><span class="k">価格</span>DAY1無料／DAY2 2,000円</span></div>
       </div>
 
       <!-- Era 3 -->
@@ -1550,6 +1548,7 @@
         <div class="edition-body">
           <h4>民間移行1年目／1/29・30 金沢市アートホール</h4>
           <p class="theme">テーマ：これからの表現、これからのクリエイティブ</p>
+          <div class="edition-meta"><span class="field"><span class="k">主催</span>eAT開催委員会</span><span class="field"><span class="k">副</span>宮田人司 就任</span><span class="field"><span class="k">会場</span>金沢市アートホール</span></div>
           <p>参加者<strong>525名</strong>（過去最多規模）。</p>
           <p>初日：<strong>eAT2016金沢大賞＝菅野薫</strong>（電通クリエイティブテクノロジスト、賞金50万円）／<strong>奨励賞＝雪花</strong>（伝統工芸×3DCAD、5万円）の表彰式で開幕。<br>
           金沢ゆかりの若手クリエイタープレゼンの後、プロデューサー4名（<strong>中島信也・土佐信道・宮田人司・小西利行</strong>）によるセッション。</p>
@@ -1559,7 +1558,6 @@
             大賞受賞の菅野薫は、同年（2016年）<strong>日本広告業協会「クリエイター・オブ・ザ・イヤー」</strong>も受賞（2014年に続く2度目）。リオ2016大会閉会式の東京パフォーマンス、東京2020フラッグハンドオーバーセレモニーの演出を担い、「全世界200の国と地域の人が同時視聴し、日本をクリエイティブ・ディレクションした」と評された。<strong>eAT大賞と国内最高峰の広告賞のダブル受賞</strong>は、eATの「時代を象徴するクリエイターを見抜く慧眼」を証明する出来事となった。
           </div>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">主催</span>eAT開催委員会</span><span class="field"><span class="k">副</span>宮田人司 就任</span><span class="field"><span class="k">会場</span>金沢市アートホール</span></div>
       </div>
 
       <div class="edition">
@@ -1567,6 +1565,7 @@
         <div class="edition-body">
           <h4>総合P：小西利行（POOL INC.）／ 1/27・28</h4>
           <p class="theme">テーマ：会いにキテレツ。見にキテレツ。</p>
+          <div class="edition-meta"><span class="field"><span class="k">夜塾</span>湯涌温泉 旅館かなや</span><span class="field"><span class="k">体制</span>公営→民間2年目</span><span class="field"><span class="k">夜塾証言</span>「川井島」</span></div>
           <p>大賞：<strong>片渕須直</strong>（『この世界の片隅に』）／奨励賞：<strong>北出斎太郎</strong>（ギタークリエイター）。</p>
           <p>登壇ゲスト18名：片渕須直、樋口真嗣、菅野薫、倉本美津留、孫泰蔵、宮田人司、土佐信道、川井憲次、徳井直生、山口裕美、渋谷慶一郎、児玉裕一、浦沢直樹、秋山具義、高橋祐士、田崎佑樹、菊川裕也、北出斎太郎。</p>
           <p>ペアセッション構成（異業種掛け合わせトーク）：
@@ -1585,7 +1584,6 @@
             「川井島」（メイン＝川井憲次 × 土佐信道）には約20名が集まり、車座になって本業と参加理由を順に自己紹介。中島実行委員長が23:30に一旦「締めの挨拶」をし2割退出、その後も翌朝まで続行する方式が定着していた。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">夜塾</span>湯涌温泉 旅館かなや</span><span class="field"><span class="k">体制</span>公営→民間2年目</span><span class="field"><span class="k">夜塾証言</span>「川井島」</span></div>
       </div>
 
       <div class="edition">
@@ -1593,6 +1591,7 @@
         <div class="edition-body">
           <h4>総合P：秋山具義（アートディレクター／デイリーフレッシュ代表） ／ 1/26（金）・27（土）</h4>
           <p class="theme">テーマ：KANAZAWOW!</p>
+          <div class="edition-meta"><span class="field"><span class="k">DAY1</span>無料</span><span class="field"><span class="k">DAY2</span>一般 2,500円</span><span class="field"><span class="k">セット</span>一般 25,000円</span><span class="field"><span class="k">夜塾</span>湯涌温泉 旅館かなや</span><span class="field"><span class="k">体制</span>eAT最後の年</span></div>
           <p style="font-size:14px;">
             <strong>秋山具義</strong>（1966年東京生まれ）はAKB48のCDジャケットデザイン、キャラクターデザインほか多数を手掛けるAD。
             <em>eAT「eATに呼ばれたクリエイターは、その年からめちゃめちゃ忙しくなる」</em>のジンクスを繰り返し体現してきたeATの常連ゲストから、この年ついに総合P昇格。
@@ -1608,13 +1607,13 @@
             そしてこの第22回を最後に、eAT（小文字）は一年の休止（2018年度）を経て、第23回（2020年）で「EAT」大文字化＝食文化へと大転換することになる。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">DAY1</span>無料</span><span class="field"><span class="k">DAY2</span>一般 2,500円</span><span class="field"><span class="k">セット</span>一般 25,000円</span><span class="field"><span class="k">夜塾</span>湯涌温泉 旅館かなや</span><span class="field"><span class="k">体制</span>eAT最後の年</span></div>
       </div>
 
       <div class="edition" style="opacity: 0.55;">
         <div class="edition-no edition-no--hiatus"><span class="nth-big nth-big--hiatus">休止</span><span class="year">2019</span><span class="fy">FY2018</span><span class="era">平成30年度</span></div>
         <div class="edition-body">
           <h4>開催なし（2018年度事業）</h4>
+          <div class="edition-meta"><span class="field"><span class="k">ステータス</span>開催記録なし（公式確認）</span><span class="field"><span class="k">典拠</span>2020年公式レポート</span><span class="field"><span class="k">次回</span>FY2019 / EAT 2020へ</span></div>
           <p class="theme" style="color:var(--muted)">eAT → EAT リブランディングへの沈黙の準備期間</p>
           <p style="color:var(--muted); font-size:14px">
             2017年度事業（eAT 2018 in KANAZAWA、2018年1月開催）を最後に、2018年度（2019年開催相当）は<strong>開催されなかった</strong>。
@@ -1628,7 +1627,6 @@
             中止の報を聞いた関係者は「あの空間が失われてしまうのかという、さみしさともったいなさが入り交じったような気持ち」となり、2020年復活の告知は即日満員御礼だった（公式レポートより）。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">ステータス</span>開催記録なし（公式確認）</span><span class="field"><span class="k">典拠</span>2020年公式レポート</span><span class="field"><span class="k">次回</span>FY2019 / EAT 2020へ</span></div>
       </div>
 
       <!-- Era 4 -->
@@ -1637,6 +1635,7 @@
         <div class="edition-body">
           <h4>新生「EAT」始動（大文字化） ／ 主催：EAT KANAZAWA実行委員会 ／ 事業協力：金沢市</h4>
           <p class="theme">STATEMENT「みんなで、好奇心の実を食べよう。」</p>
+          <div class="edition-meta"><span class="field"><span class="k">会場1</span>A_RESTAURANT</span><span class="field"><span class="k">会場2</span>花鏡庵金沢（旧 壽屋）</span><span class="field"><span class="k">主催</span>EAT実行委員会</span><span class="field"><span class="k">協力</span>金沢市</span><span class="field"><span class="k">協賛</span>Mistletoe / OPENSAUCE / WATER</span><span class="field"><span class="k">司会</span>南早苗</span><span class="field"><span class="k">料理</span>Andre Chiang+髙木慎一朗</span></div>
           <div style="background: rgba(184,53,47,0.06); border-left: 3px solid var(--red); padding: 14px 18px; margin: 12px 0; font-size:14px; line-height:1.85;">
             <div style="margin-bottom:10px;"><strong>「eAT → EAT」大文字化の公式理由</strong>（中島信也・実行委員長、2020年 DAY1 オープニング発言）：</div>
             <div style="font-style:italic;">「かつてのelectronicという言葉には、これからやってくるデジタル時代に対してわれわれはどう立ち向かっていこうかという大きなテーマがあった。でも今、デジタルとかエレクトロニックが普通になって、では次にどうするかというフェーズに変化している。クリエイティブの世界では、まだまだ受注側であるクリエイターが弱い立場に立っている。一方、食の世界では、料理を作ってくれる料理人をリスペクトする考え方をみんなが自然に持てるようになってきている。食がリードすることで、作り手をリスペクトする世界を作っていけるようなイベントにしていきたい」</div>
@@ -1727,7 +1726,6 @@
             <em>EAT 2020は、単なる一日のイベントではなく、参加者同士の新しい協業を生み出す触媒として機能した。</em>
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">会場1</span>A_RESTAURANT</span><span class="field"><span class="k">会場2</span>花鏡庵金沢（旧 壽屋）</span><span class="field"><span class="k">主催</span>EAT実行委員会</span><span class="field"><span class="k">協力</span>金沢市</span><span class="field"><span class="k">協賛</span>Mistletoe / OPENSAUCE / WATER</span><span class="field"><span class="k">司会</span>南早苗</span><span class="field"><span class="k">料理</span>Andre Chiang+髙木慎一朗</span></div>
       </div>
 
       <div class="edition">
@@ -1735,6 +1733,7 @@
         <div class="edition-body">
           <h4>コロナ禍対応：音声メディア Clubhouse にてオンライン開催</h4>
           <p class="theme">コロナ禍を「声だけで繋がる」新フォーマットの実験に反転</p>
+          <div class="edition-meta"><span class="field"><span class="k">媒体</span>Clubhouse</span><span class="field"><span class="k">背景</span>コロナ禍 / Clubhouse国内ブーム</span><span class="field"><span class="k">公式</span>FB: EAT KANAZAWA 2021</span></div>
           <p style="font-size:14px; margin-top:10px;">
             2020年春から続く新型コロナウイルス感染症のため、前年のようなリアル会場開催が不可能に。
             <strong>ちょうど2021年1〜2月に日本国内で爆発的に話題となった招待制音声SNS「Clubhouse」</strong>を会場として選択。
@@ -1748,7 +1747,6 @@
             ※ 具体的なスケジュール・登壇者リストはこのFacebookページ以外でまとまった形では公開されておらず、参加者SNS投稿等からの再構成が今後の課題。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">媒体</span>Clubhouse</span><span class="field"><span class="k">背景</span>コロナ禍 / Clubhouse国内ブーム</span><span class="field"><span class="k">公式</span>FB: EAT KANAZAWA 2021</span></div>
       </div>
 
       <div class="edition">
@@ -1756,6 +1754,7 @@
         <div class="edition-body">
           <h4>3/20（日）金沢未来のまち創造館</h4>
           <p class="theme">テーマ：出る杭に乗っかろう</p>
+          <div class="edition-meta"><span class="field"><span class="k">会場</span>金沢未来のまち創造館</span><span class="field"><span class="k">開始</span>10:00 4セッション</span><span class="field"><span class="k">数え方</span>25年にわたり（公式）</span></div>
           <p>
             <strong>ST01「未来の生き方」10:00-11:20</strong><br>
             モデ：小西利行（POOL）／タナカガ（パパラピーズ・GROVE）・中郡曖菜（LARME代表）・秋山具義（デイリーフレッシュ）。<br><br>
@@ -1770,7 +1769,6 @@
             <em>運営側告知（金沢未来のまち創造館公式）には「1997年以降25年にわたり開催され続けている」と明記。</em>
           </p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">会場</span>金沢未来のまち創造館</span><span class="field"><span class="k">開始</span>10:00 4セッション</span><span class="field"><span class="k">数え方</span>25年にわたり（公式）</span></div>
       </div>
 
       <div class="edition">
@@ -1778,6 +1776,7 @@
         <div class="edition-body">
           <h4>3/25（土）金沢市文化ホール 2F 大集会室（金沢市高岡町15-1）／ 13:00-17:30 ／ 定員100名・無料</h4>
           <p class="theme">テーマ：捨てる、繋ぐ、創る</p>
+          <div class="edition-meta"><span class="field"><span class="k">会場</span>金沢市文化ホール</span><span class="field"><span class="k">テーマ</span>捨てる、繋ぐ、創る</span><span class="field"><span class="k">登壇</span>17名/3セッション</span><span class="field"><span class="k">特別</span>孫泰蔵『冒険の書』直結</span><span class="field"><span class="k">原点回帰</span>どろだんご先生</span><span class="field"><span class="k">主催</span>EAT実行委員会</span></div>
           <p style="font-size:14px; margin-top:10px;">
             通算第26回。主催：EAT KANAZAWA実行委員会（<span style="font-family:'JetBrains Mono',monospace;font-size:12px">eat-kanazawa@cll.or.jp</span>）。申込は eatkanazawa2023.peatix.com で先着順100名。
           </p>
@@ -1806,7 +1805,6 @@
             ⑤ <strong>第23回ゲストの再招聘</strong>：山本雅也・加藤拓・REATOMO が2020→2023で再登壇——新生EAT KANAZAWA が「毎年違うゲスト」から「コミュニティ化したゲスト」モデルに移行していることを示す。
           </div>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">会場</span>金沢市文化ホール</span><span class="field"><span class="k">テーマ</span>捨てる、繋ぐ、創る</span><span class="field"><span class="k">登壇</span>17名/3セッション</span><span class="field"><span class="k">特別</span>孫泰蔵『冒険の書』直結</span><span class="field"><span class="k">原点回帰</span>どろだんご先生</span><span class="field"><span class="k">主催</span>EAT実行委員会</span></div>
       </div>
 
       <div class="edition">
@@ -1814,6 +1812,7 @@
         <div class="edition-body">
           <h4>3/24（日）金沢美術工芸大学 新校舎 体育館（金沢市小立野2-40-1） ／ 13:00-18:00</h4>
           <p class="theme">テーマ：深化するニッポン、進化するニッポン</p>
+          <div class="edition-meta"><span class="field"><span class="k">定員</span>200名 無料</span><span class="field"><span class="k">公式</span>今年で26年続く</span><span class="field"><span class="k">特記</span>EAT＝食文化へ</span></div>
           <p>
             <strong>ST01「あるもので、なかったものをつくる」13:00-14:30</strong><br>
             モデ：小西利行（POOL INC. CEO）／古谷知華（日本草木研究所 代表）・谷口千春（ミナガルテン代表／ミナサカ代表取締役）。<br><br>
@@ -1827,7 +1826,6 @@
             公式告知に<strong>「2020年より、"EAT=食文化"の意を取り入れアップデート」</strong>と明記 —— eAT（electronic Art Talent）からEAT（食文化）への<strong>意味的転換</strong>が公式に認められた告知。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">定員</span>200名 無料</span><span class="field"><span class="k">公式</span>今年で26年続く</span><span class="field"><span class="k">特記</span>EAT＝食文化へ</span></div>
       </div>
 
       <div class="edition">
@@ -1835,6 +1833,7 @@
         <div class="edition-body">
           <h4>2/23 金沢市民芸術村パフォーミングスクエア</h4>
           <p class="theme">テーマ：灯台もと明るし 〜未来を面白がる人びと〜</p>
+          <div class="edition-meta"><span class="field"><span class="k">定員</span>200名 無料</span><span class="field"><span class="k">PARTY</span>A_RESTAURANT</span><span class="field"><span class="k">主催</span>金沢市＋EAT実行委員会</span></div>
           <p>
             <strong>ST01「"アニメーション"の未来を面白がる人びと」</strong><br>モデ：宮田人司（Mistletoe JAPAN / TONKO HOUSE JAPAN）／米倉千貴（オルツ代表）・林ゆうき（作曲家）・加藤拓（NHKドラマ演出家）。<br><br>
             <strong>ST02「"伝統文化"の未来を面白がる人びと」</strong><br>モデ：上町達也（secca）／ミヤタコーヘイ（black adder）・池田佳乃子（HAA）・桂枝之進（落語家）。<br><br>
@@ -1854,7 +1853,6 @@
             <span style="color:var(--muted);">初代委員長・浜野保樹が設計した「キッズ・クリエイティブ教育」の原点に、世代交代を経た今も回帰している。第20回（2011）まで存在した「ジュニア部門」、こども塾vol.3、そしてINAZUMAへと系譜が続いている。<strong>ミヤタコーヘイは第28回での登場を経て、翌第29回（2026）では村山卓市長とチェロ×フルートで共演</strong>する——eATの「登壇→ジンクス→金沢深掘り」の流れが最新回で実現した実例。</span>
           </div>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">定員</span>200名 無料</span><span class="field"><span class="k">PARTY</span>A_RESTAURANT</span><span class="field"><span class="k">主催</span>金沢市＋EAT実行委員会</span></div>
       </div>
 
       <div class="edition">
@@ -1862,6 +1860,7 @@
         <div class="edition-body">
           <h4>2026.2.22（日）金沢市民芸術村 パフォーミングスクエア ／ 主催：実行委員会・金沢市</h4>
           <p class="theme">テーマ：才能よ、呪文を唱えよ。 —— AIは、ヒトの何を解放するのか</p>
+          <div class="edition-meta"><span class="field"><span class="k">事業年度</span>2025年度（令和7年度）</span><span class="field"><span class="k">開催</span>2026.2.22 Sun</span><span class="field"><span class="k">会場</span>金沢市民芸術村 大和町</span><span class="field"><span class="k">来場</span>約100名</span><span class="field"><span class="k">象徴</span>村山市長フルート参加</span></div>
           <p>
             <strong>3セッションに15人のクリエーターが登壇、来場者約100人。</strong>
             冒頭に<strong>AI生成楽曲＋ゲスト演奏のライブパフォーマンス</strong>。
@@ -1890,7 +1889,6 @@
             翌2026年度事業（2027年2月開催予定）が30周年記念回（第30回）となる。
           </em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">事業年度</span>2025年度（令和7年度）</span><span class="field"><span class="k">開催</span>2026.2.22 Sun</span><span class="field"><span class="k">会場</span>金沢市民芸術村 大和町</span><span class="field"><span class="k">来場</span>約100名</span><span class="field"><span class="k">象徴</span>村山市長フルート参加</span></div>
       </div>
 
       <!-- 30周年記念回 -->
@@ -1899,6 +1897,7 @@
         <div class="edition-body">
           <h4 style="color: var(--red)">EAT KANAZAWA 30周年記念事業（開催予定） ／ 2027年2月</h4>
           <p class="theme">2026年度事業（令和8年度）／ 1996年度の初回から30年目の節目</p>
+          <div class="edition-meta"><span class="field"><span class="k">事業年度</span>2026年度（令和8年度）</span><span class="field"><span class="k">開催予定</span>2027年2月</span><span class="field"><span class="k">節目</span>創立30周年</span></div>
           <p>1996年度に当時の山出保市長と浜野保樹委員長（東京大学大学院）のもとで立ち上がった「eAT」は、30年の歳月を経て、
           浜野→中島信也へと実行委員長を引き継ぎ、公営→民間主導、メディアアート→食文化という二度の大転回を経てもなお、
           「最前線のクリエイターを金沢に呼び寄せる」という核を一度も失っていない、全国でも稀有な都市文化事業となった。</p>
@@ -1906,7 +1905,6 @@
           企画・テーマ・登壇者・会場構成は、今後、本サイトの更新を通じて順次公開される。</p>
           <p style="color:var(--muted); font-size:13px; margin-top: 10px"><em>※ 本サイトは、この30周年記念事業へ向けた情報整理のアーカイブである。</em></p>
         </div>
-        <div class="edition-side"><span class="field"><span class="k">事業年度</span>2026年度（令和8年度）</span><span class="field"><span class="k">開催予定</span>2027年2月</span><span class="field"><span class="k">節目</span>創立30周年</span></div>
       </div>
 
     </div>
