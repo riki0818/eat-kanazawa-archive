@@ -818,9 +818,133 @@
     .section-num{ font-size: 40px !important; }
     .section-title{ font-size: 18px !important; }
   }
+
+  /* ============ STICKY NAV ============ */
+  #site-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(242,237,227,0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(26,24,20,0.12);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  #site-nav::-webkit-scrollbar { display: none; }
+  #site-nav.nav-visible { transform: translateY(0); }
+  #site-nav a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0 13px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    border-right: 1px solid rgba(26,24,20,0.08);
+    transition: color 0.15s, background 0.15s;
+    flex-shrink: 0;
+  }
+  #site-nav a:first-child { border-left: 1px solid rgba(26,24,20,0.08); }
+  #site-nav a:hover { color: var(--ink); background: rgba(26,24,20,0.04); }
+  #site-nav a.nav-active { color: var(--red); }
+  @media (max-width: 768px) {
+    #site-nav { justify-content: flex-start; }
+    #site-nav a { font-size: 9px; padding: 0 10px; }
+  }
+
+  /* ============ BACK TO TOP ============ */
+  #back-top {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    width: 38px; height: 38px;
+    background: var(--ink);
+    color: var(--paper);
+    border: none; cursor: pointer;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 20px; line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s, background 0.2s;
+    z-index: 998;
+  }
+  #back-top.btt-visible { opacity: 1; pointer-events: auto; }
+  #back-top:hover { background: var(--red); }
+  @media (max-width: 768px) {
+    #back-top { bottom: 16px; right: 16px; width: 34px; height: 34px; font-size: 17px; }
+  }
+
+  /* ============ EDITION ACCORDION ============ */
+  .edition-no { cursor: pointer; position: relative; }
+  .ed-toggle-btn {
+    display: block;
+    margin-top: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: rgba(107,101,88,0.7);
+    user-select: none;
+    transition: color 0.2s;
+  }
+  .edition-no:hover .ed-toggle-btn { color: var(--muted); }
+  .edition-body {
+    max-height: 9999px;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 1;
+  }
+  .edition.ed-collapsed .edition-body {
+    max-height: 0 !important;
+    opacity: 0;
+  }
+  .ed-toggle-btn::before { content: '▾ '; font-size: 10px; }
+  .edition.ed-collapsed .ed-toggle-btn::before { content: '▸ '; }
+
+  /* ============ TIME CONTEXT TOGGLE ============ */
+  .tc-wrap { cursor: pointer; }
+  .tc-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    user-select: none;
+    padding-bottom: 2px;
+  }
+  .tc-label::after { content: '▾'; font-size: 9px; transition: transform 0.2s; display: inline-block; }
+  .tc-wrap.tc-closed .tc-label::after { transform: rotate(-90deg); }
+  .tc-body {
+    overflow: hidden;
+    max-height: 400px;
+    transition: max-height 0.3s ease, opacity 0.25s ease;
+    opacity: 1;
+  }
+  .tc-wrap.tc-closed .tc-body { max-height: 0 !important; opacity: 0; }
 </style>
 </head>
 <body>
+<nav id="site-nav">
+  <a href="#what">01 EATとは</a>
+  <a href="#eras">02 四つの時代</a>
+  <a href="#editions">03 年代記</a>
+  <a href="#yorujuku">04 夜塾</a>
+  <a href="#kanazawa-effect">04.5 金沢効果</a>
+  <a href="#pivot">05 転換</a>
+  <a href="#people">06 継承者</a>
+  <a href="#community">07 記録</a>
+</nav>
 
 <!-- MASTHEAD -->
 <div class="container">
@@ -2865,6 +2989,86 @@
     <span class="divider"></span>
   </div>
 </div>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="ページトップへ">↑</button>
+
+<script>
+(function(){
+  // ── Sticky nav + back-to-top visibility ──
+  var nav = document.getElementById('site-nav');
+  var btt = document.getElementById('back-top');
+  var secIds = ['what','eras','editions','yorujuku','kanazawa-effect','pivot','people','community'];
+  var navLinks = Array.from(nav.querySelectorAll('a'));
+
+  function onScroll(){
+    var y = window.pageYOffset;
+    nav.classList.toggle('nav-visible', y > 260);
+    btt.classList.toggle('btt-visible', y > 600);
+
+    // Active section highlight
+    var current = '';
+    secIds.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && el.getBoundingClientRect().top <= 60) current = id;
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('nav-active', a.getAttribute('href') === '#'+current);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  // ── Edition accordion ──
+  document.querySelectorAll('.edition').forEach(function(ed){
+    var no   = ed.querySelector('.edition-no');
+    var body = ed.querySelector('.edition-body');
+    if(!no || !body) return;
+
+    var btn = document.createElement('span');
+    btn.className = 'ed-toggle-btn';
+    btn.textContent = 'DETAIL';
+    no.appendChild(btn);
+
+    no.addEventListener('click', function(){
+      ed.classList.toggle('ed-collapsed');
+    });
+  });
+
+  // ── TIME CONTEXT collapse (initially closed) ──
+  document.querySelectorAll('.edition-body').forEach(function(body){
+    body.querySelectorAll('div').forEach(function(div){
+      // detect TIME CONTEXT block by its span text
+      var spans = div.querySelectorAll('span');
+      var isTC = false;
+      spans.forEach(function(s){ if(s.textContent.trim() === 'TIME CONTEXT') isTC = true; });
+      if(!isTC) return;
+
+      // Wrap the div content
+      div.classList.add('tc-wrap', 'tc-closed');
+
+      // Build label
+      var label = document.createElement('div');
+      label.className = 'tc-label';
+      label.textContent = 'TIME CONTEXT';
+
+      // Build collapsible body
+      var tcBody = document.createElement('div');
+      tcBody.className = 'tc-body';
+
+      // Move all child nodes (except the original span) into tcBody
+      var kids = Array.from(div.childNodes);
+      kids.forEach(function(k){ tcBody.appendChild(k); });
+
+      div.appendChild(label);
+      div.appendChild(tcBody);
+
+      // Toggle on click
+      div.addEventListener('click', function(e){
+        div.classList.toggle('tc-closed');
+      });
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
