@@ -910,28 +910,7 @@
   .ed-toggle-btn::before { content: '▾ '; font-size: 10px; }
   .edition.ed-collapsed .ed-toggle-btn::before { content: '▸ '; }
 
-  /* ============ TIME CONTEXT TOGGLE ============ */
-  .tc-wrap { cursor: pointer; }
-  .tc-label {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    color: var(--gold);
-    user-select: none;
-    padding-bottom: 2px;
-  }
-  .tc-label::after { content: '▾'; font-size: 9px; transition: transform 0.2s; display: inline-block; }
-  .tc-wrap.tc-closed .tc-label::after { transform: rotate(-90deg); }
-  .tc-body {
-    overflow: hidden;
-    max-height: 400px;
-    transition: max-height 0.3s ease, opacity 0.25s ease;
-    opacity: 1;
-  }
-  .tc-wrap.tc-closed .tc-body { max-height: 0 !important; opacity: 0; }
+
 </style>
 </head>
 <body>
@@ -964,7 +943,6 @@
       各時代の最前線クリエイターを金沢に集結させてきた。
       2014年度をもって公営として区切り（EAT KANAZAWA 2015「eAT金沢は終わるのか!?」）、2015年度から民間主導で再起動。
       2019年度には「EAT＝食文化」へと大胆にピボットし、2027年2月開催予定の <strong>30周年記念回（2026年度事業）</strong> へと向かっている。
-      本サイトは、その30年の歩みを事業年度ベースで再整理した情報アーカイブである。
     </p>
 
     <div class="masthead-stats">
@@ -1009,8 +987,6 @@
         <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--red); letter-spacing: 0.15em; margin-bottom: 10px;">NEXT / 第30回</div>
         <p style="font-size: 15px; line-height: 1.8; color: var(--ink);">
           2026年度事業としての<strong>第30回 EAT KANAZAWA は、2027年2月に開催予定</strong>である。
-          本サイトは、この30周年記念事業に向けて、30年の歩みを<strong>事業年度ベース</strong>で再整理した情報アーカイブである。
-          各回を「開催年／事業年度（FY）／通算回」の三段表記で記録している。
         </p>
       </div>
     </div>
@@ -1256,9 +1232,7 @@
 
     <div class="prose">
       <p>
-        以下は取得できた一次・二次資料を横断して構成した、確認可能な範囲の年次記録である。
-        各エントリは<strong>開催年／事業年度（FY・和暦）／通算回</strong>の三段で表記している。
-        空欄は現時点で追跡中の項目（情報をお持ちの方は<a href="#community" style="color:var(--gold)">Section 07「記録へのご協力のお願い」</a>からご連絡ください）。
+        空欄は現時点で追跡中の項目。
       </p>
       <p style="font-size:12px; color:var(--muted); margin-top:8px; padding: 8px 14px; background: rgba(26,24,20,0.04); border-left: 2px solid var(--muted);">
         ※ 登壇者・関係者の肩書きはすべて<strong>当該回ご登壇時点のもの</strong>を記載しています。現在の所属・役職とは異なる場合があります。
@@ -2276,8 +2250,7 @@
           浜野→中島信也へと実行委員長を引き継ぎ、公営→民間主導、メディアアート→食文化という二度の大転回を経てもなお、
           「最前線のクリエイターを金沢に呼び寄せる」という核を一度も失っていない、全国でも稀有な都市文化事業となった。</p>
           <p><strong>30周年記念事業として2027年2月（2026年度内）に開催予定。</strong>
-          企画・テーマ・登壇者・会場構成は、今後、本サイトの更新を通じて順次公開される。</p>
-          <p style="color:var(--muted); font-size:13px; margin-top: 10px"><em>※ 本サイトは、この30周年記念事業へ向けた情報整理のアーカイブである。</em></p>
+          企画・テーマ・登壇者・会場構成は順次公開される。</p>
         </div>
       </div>
 
@@ -3033,40 +3006,7 @@
     });
   });
 
-  // ── TIME CONTEXT collapse (initially closed) ──
-  document.querySelectorAll('.edition-body').forEach(function(body){
-    body.querySelectorAll('div').forEach(function(div){
-      // detect TIME CONTEXT block by its span text
-      var spans = div.querySelectorAll('span');
-      var isTC = false;
-      spans.forEach(function(s){ if(s.textContent.trim() === 'TIME CONTEXT') isTC = true; });
-      if(!isTC) return;
 
-      // Wrap the div content
-      div.classList.add('tc-wrap', 'tc-closed');
-
-      // Build label
-      var label = document.createElement('div');
-      label.className = 'tc-label';
-      label.textContent = 'TIME CONTEXT';
-
-      // Build collapsible body
-      var tcBody = document.createElement('div');
-      tcBody.className = 'tc-body';
-
-      // Move all child nodes (except the original span) into tcBody
-      var kids = Array.from(div.childNodes);
-      kids.forEach(function(k){ tcBody.appendChild(k); });
-
-      div.appendChild(label);
-      div.appendChild(tcBody);
-
-      // Toggle on click
-      div.addEventListener('click', function(e){
-        div.classList.toggle('tc-closed');
-      });
-    });
-  });
 })();
 </script>
 
